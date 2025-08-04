@@ -1,0 +1,95 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background-image: url('https://st4.depositphotos.com/26257822/30257/i/600/depositphotos_302573338-stock-photo-loft-cement-wall-background.jpghttps://st3.depositphotos.com/13765278/17697/i/600/depositphotos_176978334-stock-photo-old-marble-texture-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 11;
+}
+.navMenu {
+    flex-grow: 1;
+}
+.navList {
+    list-style: none;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+.navItem {
+    margin: 0 15px;
+}
+.navItem a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+.navItem a:hover {
+  color: #0c0c5b;
+}
+.feedbackBtn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+.feedbackBtn:hover {
+  background-color: #ddd;
+}
+@media (max-width: 768px) {
+  .navList {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 20;;
+  }
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    padding: 40px 0;
+  }
+
+  .feedbackBtn {
+    display: none;
+  }
+   .navItem {
+    margin: 10px 0;
+  }
+
+  .navItem a {
+    color: #fff; 
+    font-size: 20px;
+  }
+}
