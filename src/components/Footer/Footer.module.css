@@ -9,13 +9,15 @@
   position: relative;
   height: 384px;
   background-color: #374151;
+  overflow: hidden;
 }
 
 .mapOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, #111827, transparent);
-  z-index: 10;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .mapPlaceholder {
@@ -31,6 +33,7 @@
   height: 100%;
   border: none;
   display: block;
+  pointer-events: auto; /* Дозволяє взаємодію з картою */
 }
 .mapCenter {
   text-align: center;
