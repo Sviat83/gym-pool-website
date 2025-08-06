@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gym-pool-website/static/css/main.1b5c6c61.css",
-    "main.js": "/gym-pool-website/static/js/main.cc184506.js",
+    "main.js": "/gym-pool-website/static/js/main.20851e0d.js",
     "index.html": "/gym-pool-website/index.html",
     "main.1b5c6c61.css.map": "/gym-pool-website/static/css/main.1b5c6c61.css.map",
-    "main.cc184506.js.map": "/gym-pool-website/static/js/main.cc184506.js.map"
+    "main.20851e0d.js.map": "/gym-pool-website/static/js/main.20851e0d.js.map"
   },
   "entrypoints": [
     "static/css/main.1b5c6c61.css",
-    "static/js/main.cc184506.js"
+    "static/js/main.20851e0d.js"
   ]
 }
