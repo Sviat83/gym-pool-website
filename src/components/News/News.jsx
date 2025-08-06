@@ -19,7 +19,7 @@ const News = () => {
     },
     {
       id: 3,
-      title: "НОВІ ТРЕНУВАЛЬНІ ПРОГРАМИ",
+      title: "НОВІ ТРЕНУВАЛЬНІ ПРОГРАМИ Prime Life Club",
       description: "Знайомтеся з новими тренувальними програмами",
       image: "/api/placeholder/400/250",
       date: "10.01.2025"
