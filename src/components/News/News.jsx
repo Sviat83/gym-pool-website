@@ -7,21 +7,21 @@ const News = () => {
       id: 1,
       title: "ГРАФІК РОБОТИ НА РІЗДВО ТА НОВИЙ РІК",
       description: "Графік роботи Prime Life Club на Різдво та Новий Рік",
-      image: "/api/placeholder/400/250",
+      image: "https://st4.depositphotos.com/4319567/22592/i/450/depositphotos_225924008-stock-photo-muscular-handsome-sexy-santa-claus.jpg",
       date: "25.12.2024"
     },
     {
       id: 2,
       title: "РІЧНИЦЯ ФІТНЕС-КЛУБУ Prime Life Club",
       description: "Святкуємо річницю нашого фітнес-клубу",
-      image: "/api/placeholder/400/250", 
+      image: "https://st2.depositphotos.com/1518767/9040/i/450/depositphotos_90408004-stock-photo-fit-people-working-out-in.jpg", 
       date: "15.01.2025"
     },
     {
       id: 3,
       title: "НОВІ ТРЕНУВАЛЬНІ ПРОГРАМИ Prime Life Club",
       description: "Знайомтеся з новими тренувальними програмами",
-      image: "/api/placeholder/400/250",
+      image: "https://st3.depositphotos.com/1518767/12693/i/450/depositphotos_126936964-stock-photo-athletes-looking-in-tablet-computer.jpg",
       date: "10.01.2025"
     }
   ];
