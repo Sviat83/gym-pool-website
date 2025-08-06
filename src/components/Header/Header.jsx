@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>Uni Force</div>
+            <div className={styles.logo}>Prime Life Club</div>
             <nav className={styles.navMenu}>
                 <ul className={`${styles.navList} ${isOpen ? styles.navOpen : ''}`}>
                     <li className={styles.navItem}><a href='#home'>Про клуб</a></li>
@@ -20,7 +20,7 @@ const Header = () => {
                     <li className={styles.navItem}><a href='#one-time-visit'>Разовий візит</a></li>
                     <li className={styles.navItem}><a href='#schedule'>Розклад</a></li>
                     <li className={styles.navItem}><a href='#children-club'>Дитячий клуб</a></li>
-                    <li className={styles.navItem}><a href='#cafe'>Uni Cafe</a></li>
+                    <li className={styles.navItem}><a href='#cafe'>Prime Life Club</a></li>
                 </ul>
             </nav>
             <button className={styles.feedbackBtn}>Зворотній зв'язок</button>

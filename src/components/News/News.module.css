@@ -1,0 +1,131 @@
+/* News Section */
+.newsSection {
+  padding: 120px 16px 64px 16px; /* Збільшений верхній відступ */
+  background-color: #111827;
+  color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  color: #ef4444;
+}
+
+.viewAllBtn {
+  background-color: #dc2626;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  background-color: #b91c1c;
+}
+
+/* News Grid */
+.newsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.newsCard {
+  background-color: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Image */
+.imageWrapper {
+  position: relative;
+  height: 192px;
+  background: linear-gradient(to right, #ef4444, #dc2626);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.date {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+/* Content */
+.content {
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  color: #f87171;
+}
+
+.description {
+  color: #d1d5db;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .newsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
