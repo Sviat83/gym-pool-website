@@ -20,7 +20,7 @@ const Header = () => {
                     <li className={styles.navItem}><a href='#one-time-visit'>Разовий візит</a></li>
                     <li className={styles.navItem}><a href='#schedule'>Розклад</a></li>
                     <li className={styles.navItem}><a href='#children-club'>Дитячий клуб</a></li>
-                    <li className={styles.navItem}><a href='#cafe'>Uni Cafe</a></li>
+                    <li className={styles.navItem}><a href='#cafe'>Prime Life Club</a></li>
                 </ul>
             </nav>
             <button className={styles.feedbackBtn}>Зворотній зв'язок</button>

@@ -3,6 +3,11 @@ import HeroSection from './components/Hero/Hero';
 // import './App.module.css'
 import ScrollingText from './components/ScrollingText/ScrollingText';
 
+import News from './components/News/News';
+import Footer from './components/Footer/Footer';
+import './App.module.css'
+
+
 function App() {
   const messages = [
     "АКВАФІТНЕС",
@@ -15,12 +20,15 @@ function App() {
   ]
 
   return (
-    <div >
+    <div>
       <Header />
       <HeroSection />
       <ScrollingText messages={messages} />
+      {/* Тут будуть інші секції від інших учасників команди */}
+      <News />
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;
