@@ -1,0 +1,41 @@
+.scrollingTextWrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #222431;
+    color: #fff;
+    padding: 30px;
+}
+.scrollingText {
+    display: inline-block;
+    animation: scroll 30s linear infinite;
+}
+.message {
+    display: inline-block;
+    padding: 8px 30px;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 36px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .message {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 420px) {
+    .message {
+        font-size: 18px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

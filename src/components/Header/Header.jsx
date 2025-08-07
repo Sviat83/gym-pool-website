@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>Uni Force</div>
+            <div className={styles.logo}>Prime Life Club</div>
             <nav className={styles.navMenu}>
                 <ul className={`${styles.navList} ${isOpen ? styles.navOpen : ''}`}>
                     <li className={styles.navItem}><a href='#home'>Про клуб</a></li>
