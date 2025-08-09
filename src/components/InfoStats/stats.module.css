@@ -1,0 +1,82 @@
+.statsSection {
+    padding: 40px 0;
+    background-color: #1f2937;
+}
+.statsList {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 0;
+}
+
+.statsItem {
+    width: 50%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+/* Шахматне розташування: парні елементи (2-й, 4-й) зміщуємо вниз */
+.statsList .statsItem:nth-child(even) {
+    transform: translateY(80px);
+    margin-top: 40px;
+}
+
+/* Непарні елементи (1-й, 3-й, 5-й) залишаються на своєму місці */
+.statsList .statsItem:nth-child(odd) {
+    transform: translateY(0);
+}
+
+.statsTitle {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: lowercase;
+    margin-bottom: 8px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.statsNumber {
+    font-size: 38px;
+    font-weight: bold;
+    color: #ef4444;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    line-height: 1;
+}
+
+.statsUnit {
+    font-size: 28px;
+    margin-left: 4px;
+}
+
+.statsText {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d1d5db;
+    margin-top: 8px;
+}
+
+/* Додаємо додатковий відступ знизу для секції, щоб компенсувати зміщення */
+.statsSection {
+    padding: 40px 0 120px 0;
+}
+
+/* Мобільна версія */
+@media (max-width: 768px) {
+  .statsItem {
+        width: 100%;
+        transform: none !important;
+        margin-top: 0 !important;
+        padding: 20px 15px;
+  }
+  
+  .statsNumber {
+        font-size: 36px;
+  }
+  
+  .statsSection {
+        padding: 40px 0;
+  }
+}

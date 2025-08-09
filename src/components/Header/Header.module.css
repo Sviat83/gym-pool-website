@@ -6,12 +6,12 @@
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 60px;
-    background-image: url('https://st4.depositphotos.com/26257822/30257/i/600/depositphotos_302573338-stock-photo-loft-cement-wall-background.jpghttps://st3.depositphotos.com/13765278/17697/i/600/depositphotos_176978334-stock-photo-old-marble-texture-background.jpg');
+    padding: 20px 30px;
+    background-color: #1f2937;
+    /* background-image: url('https://st4.depositphotos.com/26257822/30257/i/600/depositphotos_302573338-stock-photo-loft-cement-wall-background.jpghttps://st3.depositphotos.com/13765278/17697/i/600/depositphotos_176978334-stock-photo-old-marble-texture-background.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,16 +19,38 @@
     flex-wrap: wrap;
     overflow: hidden;
 }
+.headerScrolles {
+    position: fixed;
+    background-color: #111827;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logoImg {
+    width: 40px;
+    height: 40px;
+}
 .logo {
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
-    z-index: 11;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.logo:hover,
+.logo:active {
+    color: #ef4444; 
 }
 .navMenu {
     flex-grow: 1;
 }
 .navList {
     list-style: none;
+    flex-wrap: wrap;
     display: flex;
     justify-self: center;
     align-items: center;
@@ -37,57 +59,63 @@
     transition: transform 0.3s ease;
 }
 .navItem {
-    margin: 0 15px;
+    margin: 10px 12px;
 }
 .navItem a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
 }
+
 .navItem a:hover {
-  color: #0c0c5b;
-}
+    color: #ef4444;
+} 
 .feedbackBtn {
-  background-color: #fff;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 10;
+    background-color: #111827;
+    color: #fff;
+    border: 2px solid #ef4444;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
 }
 .feedbackBtn:hover {
-  background-color: #ddd;
+    background-color: #ef4444;
+    color: #fff;
+    border-color: #ef4444;
 }
 @media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;   
+  }
+  .logo {
+    font-size: 24px;
+  }  
   .navList {
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transform: translateY(-100%);
-    /* opacity: 0; */
     transition: all 0.3s ease;
-    /* z-index: 20; */
+    padding-top: 80px; 
+    gap: 15px; 
+    z-index: 20;
   }
   .navOpen {
     transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-    padding: 40px 0;
   }
-
   .feedbackBtn {
     display: none;
   }
    .navItem {
     margin: 10px 0;
   }
-
   .navItem a {
     color: #fff; 
     font-size: 20px;

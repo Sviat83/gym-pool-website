@@ -1,12 +1,13 @@
 import Header from './components/Header/Header';
 import HeroSection from './components/Hero/Hero';
-// import './App.module.css'
 import ScrollingText from './components/ScrollingText/ScrollingText';
+import InfoStats from './components/InfoStats/InfoStats';
 
 import News from './components/News/News';
 import Footer from './components/Footer/Footer';
-import Service from './components/Servises/ServiceSlider'
+import Service from './components/Servises/ServiceSlider';
 import './App.module.css'
+
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Header />
       <HeroSection />
       <ScrollingText messages={messages} />
+      <InfoStats />
       {/* Тут будуть інші секції від інших учасників команди */}
       <Service />
       
