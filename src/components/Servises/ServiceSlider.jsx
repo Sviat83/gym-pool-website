@@ -4,19 +4,19 @@ import "./ServiceSlider.css";
 const services = [
   {
     title: "ДИТЯЧА КІМНАТА",
-    image: "/images/kids.jpg",
+    image: "https://uniforce.ua/photos/cat/f/20250228_162525_DSC_7860.jpg",
   },
   {
     title: "UNI CAFE",
-    image: "/images/cafe.jpg",
+    image: "https://uniforce.ua/photos/cat/f/20250312_171251_2.jpg",
   },
   {
     title: "ПАРКІНГ",
-    image: "/images/parking.jpg",
+    image: "https://uniforce.ua/photos/cat/f/20250228_162525_DSC_7860.jpg",
   },
   {
     title: "UNI SHOP",
-    image: "/images/shop.jpg",
+    image: "https://uniforce.ua/photos/cat/f/20250321_145804_photo_2025-03-21_14-57-26.jpg",
   },
 ];
 
