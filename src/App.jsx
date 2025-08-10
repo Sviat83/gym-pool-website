@@ -6,6 +6,7 @@ import Location from './components/location/Location';
 import News from './components/News/News';
 import Footer from './components/Footer/Footer';
 import Service from './components/Servises/ServiceSlider';
+import ClubCardsSection from './components/ClubCardsSection/ClubCardsSection';
 import './App.module.css'
 
 
@@ -30,7 +31,7 @@ function App() {
       {/* Тут будуть інші секції від інших учасників команди */}
       <Location/>
       <Service />
-      
+      <ClubCardsSection />
       <News />
       <Footer />
     </div>
