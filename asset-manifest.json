@@ -1,14 +1,29 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.d3ed479e.css",
-    "main.js": "/gym-pool-website/static/js/main.ecdaaae8.js",
+    "main.css": "/gym-pool-website/static/css/main.87dc60db.css",
+    "main.js": "/gym-pool-website/static/js/main.abadf25c.js",
+    "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
+    "static/media/Spa_area.webp": "/gym-pool-website/static/media/Spa_area.3951a2888536ef14a22e.webp",
+    "static/media/fon.webp": "/gym-pool-website/static/media/fon.97ceb0a1647d30023283.webp",
+    "static/media/swimming-pools.webp": "/gym-pool-website/static/media/swimming-pools.241f5affe5bf59116edc.webp",
+    "static/media/studio.webp": "/gym-pool-website/static/media/studio.ff14f97949570abed96f.webp",
+    "static/media/advantages_parking.webp": "/gym-pool-website/static/media/advantages_parking.c56c107b657d8a7b61ec.webp",
+    "static/media/boxing.webp": "/gym-pool-website/static/media/boxing.674c3db5fb6d97c620e1.webp",
+    "static/media/kids_club.webp": "/gym-pool-website/static/media/kids_club.037cb7e2d98c103b2e7d.webp",
+    "static/media/advantages_studio.webp": "/gym-pool-website/static/media/advantages_studio.c6b7d38c6d949c67c3ef.webp",
+    "static/media/Pilates.webp": "/gym-pool-website/static/media/Pilates.8947c7ef31599d6c2225.webp",
+    "static/media/advantages_gym.webp": "/gym-pool-website/static/media/advantages_gym.233a0882dd7f6fd7a3cd.webp",
+    "static/media/Gym.webp.webp": "/gym-pool-website/static/media/Gym.webp.3501b00f5dab1559a4d5.webp",
+    "static/media/advantages_kids.webp": "/gym-pool-website/static/media/advantages_kids.5012536a6dca24de15e4.webp",
+    "static/media/advantages_pool.webp": "/gym-pool-website/static/media/advantages_pool.ddd290f2504e6aaf382f.webp",
+    "static/media/Ping_pong.webp": "/gym-pool-website/static/media/Ping_pong.37e5be8628272b4a1427.webp",
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.d3ed479e.css.map": "/gym-pool-website/static/css/main.d3ed479e.css.map",
-    "main.ecdaaae8.js.map": "/gym-pool-website/static/js/main.ecdaaae8.js.map"
+    "main.87dc60db.css.map": "/gym-pool-website/static/css/main.87dc60db.css.map",
+    "main.abadf25c.js.map": "/gym-pool-website/static/js/main.abadf25c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3ed479e.css",
-    "static/js/main.ecdaaae8.js"
+    "static/css/main.87dc60db.css",
+    "static/js/main.abadf25c.js"
   ]
 }
