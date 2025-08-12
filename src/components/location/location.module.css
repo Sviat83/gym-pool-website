@@ -53,7 +53,18 @@
   text-transform: uppercase;
   padding-left: 10px;
   margin: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 03s ease;
 }
+.card:hover .cardTitle {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
 
 .image{
   width: 100%;
