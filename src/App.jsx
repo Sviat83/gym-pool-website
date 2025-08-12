@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer';
 import Service from './components/Servises/ServiceSlider';
 import ClubCardsSection from './components/ClubCardsSection/ClubCardsSection';
 import Advantages from "./components/Advantages/Advantages"
-import './App.module.css'
+import './App.css'
 
 
 
