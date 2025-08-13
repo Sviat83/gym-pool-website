@@ -12,9 +12,6 @@ const Advantages = () => {
     <section className={styles.wrapper} style={{ backgroundImage: `url(${fon})`, }}>
       <h2 className={styles.title}>Переваги</h2>
       <div className={styles.container}>
-
-
-
         <div className={styles.imageWrapper}>
           {items.map((item, idx) => (
             <img
@@ -25,8 +22,6 @@ const Advantages = () => {
             />
           ))}
         </div>
-
-
         <div className={styles.listWrapper}>
           {items.map((item, idx) => (
             <div
