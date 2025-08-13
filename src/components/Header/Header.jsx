@@ -3,6 +3,7 @@ import styles from './Header.module.css';
 import Burger from './Burger/Burger';
 import logoImg from '../../assets/images/logo.png';
 import FeedbackForm from './FeedbackForm';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,8 +43,8 @@ const Header = () => {
                 </div>
                 <nav className={styles.navMenu}>
                     <ul className={`${styles.navList} ${isOpen ? styles.navOpen : ''}`}>
-                        <li className={styles.navItem}><a href='#home'>Про клуб</a></li>
-                        <li className={styles.navItem}><a href='#trainers'>Тренери</a></li>
+                        <li className={styles.navItem}><Link to=''>Про клуб</Link></li>
+                        <li className={styles.navItem}><Link to='trainers'>Тренери</Link></li>
                         <li className={styles.navItem}><a href='#locations'>Локації</a></li>
                         <li className={styles.navItem}><a href='#club-cards'>Клубні картки</a></li>
                         <li className={styles.navItem}><a href='#one-time-visit'>Разовий візит</a></li>
