@@ -5,7 +5,7 @@ import TrainersPage from "../pages/TrainersPage";
 
 export const routes = createBrowserRouter([
   {
-    path: "/",element:<MainLayouts/>,children:[
+    path: "/gym-pool-website",element:<MainLayouts/>,children:[
       {index:true,element:<HomePage/>},
       {path:"trainers", element:<TrainersPage/>}
     ]
