@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './Advantages.module.css'
 import { items } from './AdvantageList'
-import fon from "../../assets/images/Advantages/fon.webp"
+
 
 
 const Advantages = () => {
@@ -9,7 +9,7 @@ const Advantages = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section className={styles.wrapper} style={{ backgroundImage: `url(${fon})`, }}>
+    <section className={styles.wrapper} >
       <h2 className={styles.title}>Переваги</h2>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
