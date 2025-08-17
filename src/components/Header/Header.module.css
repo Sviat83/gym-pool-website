@@ -1,5 +1,5 @@
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -11,16 +11,15 @@
     align-items: center;
     padding: 20px 30px;
     background-color: #1f2937;
-    /* background-image: url('https://st4.depositphotos.com/26257822/30257/i/600/depositphotos_302573338-stock-photo-loft-cement-wall-background.jpghttps://st3.depositphotos.com/13765278/17697/i/600/depositphotos_176978334-stock-photo-old-marble-texture-background.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
     flex-wrap: wrap;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 .headerScrolles {
-    position: fixed;
     background-color: #111827;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     z-index: 100;
@@ -66,7 +65,6 @@
     color: #fff;
     font-size: 18px;
 }
-
 .navItem a:hover {
     color: #ef4444;
 } 
@@ -82,105 +80,6 @@
     transition: background-color 0.3s ease;
     z-index: 10;
 }
-.feedbackBtn:hover {
-    background-color: #ef4444;
-    color: #fff;
-    border-color: #ef4444;
-}
-.header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: #1f2937;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-.headerScrolles {
-    position: fixed;
-    background-color: #111827;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-}
-
-.logoWrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logoImg {
-    width: 40px;
-    height: 40px;
-}
-
-.logo {
-    font-size: 34px;
-    font-weight: bold;
-    z-index: 100;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.logo:hover,
-.logo:active {
-    color: #ef4444; 
-}
-
-.navMenu {
-    flex-grow: 1;
-}
-
-.navList {
-    list-style: none;
-    flex-wrap: wrap;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    transition: transform 0.3s ease;
-}
-
-.navItem {
-    margin: 10px 12px;
-}
-
-.navItem a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-}
-
-.navItem a:hover {
-    color: #ef4444;
-} 
-
-.feedbackBtn {
-    background-color: #111827;
-    color: #fff;
-    border: 2px solid #ef4444;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 25px;
-    margin-left: auto;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 10;
-}
-
 .feedbackBtn:hover {
     background-color: #ef4444;
     color: #fff;
@@ -201,7 +100,6 @@
     z-index: 1000;
     backdrop-filter: blur(2px);
 }
-
 .modalContent {
     background-color: #ffffff;
     padding: 40px;
@@ -216,7 +114,6 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     animation: modalAppear 0.3s ease-out;
 }
-
 @keyframes modalAppear {
     from {
         opacity: 0;
@@ -245,11 +142,9 @@
     justify-content: center;
     transition: color 0.2s ease;
 }
-
 .closeBtn:hover {
     color: #000;
 }
-
 .modalTitle {
     font-weight: 900;
     font-size: 28px;
@@ -257,7 +152,6 @@
     color: #333;
     letter-spacing: 1px;
 }
-
 .modalPhone {
     font-weight: 900;
     font-size: 26px;
@@ -267,11 +161,9 @@
     color: #333;
     transition: color 0.3s ease;
 }
-
 .modalPhone:hover {
     color: #ef4444;
 }
-
 .modalLabel {
     display: block;
     text-align: left;
@@ -280,7 +172,6 @@
     font-weight: 600;
     color: #333;
 }
-
 .modalInput {
     width: 100%;
     height: 50px;
@@ -294,17 +185,14 @@
     transition: border-color 0.3s ease;
     background-color: #fff;
 }
-
 .modalInput:focus {
     outline: none;
     border-color: #ef4444;
 }
-
 .modalInput::placeholder {
     color: #999;
     font-size: 16px;
 }
-
 .submitBtn {
     width: 100%;
     background-color: #b44334;
@@ -319,13 +207,10 @@
     letter-spacing: 0.5px;
     margin-top: 10px;
 }
-
 .submitBtn:hover {
     background-color: #942f25;
-    transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(180, 67, 52, 0.3);
 }
-
 .submitBtn:active {
     transform: translateY(0);
 }
@@ -335,11 +220,9 @@
     .header {
         padding: 15px 20px;   
     }
-    
     .logo {
         font-size: 24px;
     }  
-    
     .navList {
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.95);
@@ -353,43 +236,34 @@
         gap: 15px; 
         z-index: 20;
     }
-    
     .navOpen {
         transform: translateY(0);
     }
-    
     .feedbackBtn {
         display: none;
     }
-    
     .navItem {
         margin: 10px 0;
     }
-    
     .navItem a {
         color: #fff; 
         font-size: 20px;
     }
-    
     .modalContent {
         padding: 30px 20px;
         margin: 20px;
     }
-    
     .modalTitle {
         font-size: 24px;
     }
-    
     .modalPhone {
         font-size: 22px;
         margin-bottom: 30px;
     }
-    
     .modalInput {
         height: 45px;
         font-size: 16px;
     }
-    
     .submitBtn {
         padding: 14px 0;
         font-size: 16px;
