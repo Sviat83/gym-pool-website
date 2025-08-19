@@ -25,7 +25,6 @@ const HomePage = () => {
       <HeroSection />
       <ScrollingText messages={messages} />
       <InfoStats />
-      {/* Тут будуть інші секції від інших учасників команди */}
       <Location/>
       <Advantages/>
       <Service/>

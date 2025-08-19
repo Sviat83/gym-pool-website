@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 import styles from "./Header.module.css";
 
 const FeedbackForm = ({ onClose }) => {
@@ -6,8 +8,11 @@ const FeedbackForm = ({ onClose }) => {
     const [phone, setPhone] = useState("");
     const [nameError, setNameError] = useState("");
     const [phoneError, setPhoneError] = useState("");
+    const [loading, setLoading] = useState(false)
 
     const NAME_RE = /^[A-Za-zА-ЯІЇЄҐа-яіїєґ]+(?:[\s\-''`][A-Za-zА-ЯІЇЄҐа-яіїєґ]+)*$/;
+    
+
 
     const validateName = (value) => {
         const trimmed = value.trim();
@@ -67,7 +72,7 @@ const FeedbackForm = ({ onClose }) => {
         return "";
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         
         const nameValidation = validateName(name);
@@ -79,14 +84,30 @@ const FeedbackForm = ({ onClose }) => {
         if (nameValidation || phoneValidation) {
             return;
         }
+        try {
+            setLoading(true);
         
+           // Відправляємо дані у Firestore
+            await addDoc(collection(db, "feedback"), {
+                name: name.trim(),
+                phone: phone.trim(),
+                createdAt: new Date()
+        });
+
         alert(`Дякуємо, ${name.trim()}. Ми зателефонуємо Вам за ${phone} найближчим часом!`);
         setName("");
         setPhone("");
         setNameError("");
         setPhoneError("");
+
         onClose();
-    };
+    } catch (error) {
+        console.error("Помилка при відправці:", error);
+        alert("Сталася помилка. Спробуйте ще раз!");
+    } finally {
+        setLoading(false);
+    }
+};
 
     const handleNameChange = (e) => {
         const value = e.target.value;
@@ -176,8 +197,8 @@ const FeedbackForm = ({ onClose }) => {
                 />
                 {phoneError && <div className={styles.errorMessage}>{phoneError}</div>}
                 
-                <button type="submit" className={styles.submitBtn}>
-                    ЗАТЕЛЕФОНУЙТЕ МЕНІ
+                <button type="submit" className={styles.submitBtn} disabled={loading}>
+                     {loading ? "Відправка..." : "ЗАТЕЛЕФОНУЙТЕ МЕНІ"}
                 </button>
             </form>
         </div>

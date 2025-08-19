@@ -1,6 +1,7 @@
 // src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
 
 // Твоя конфігурація (брала з Firebase Console → Project settings → Config)
 const firebaseConfig = {
@@ -16,6 +17,7 @@ const firebaseConfig = {
 // Ініціалізація
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+export const db = getFirestore(app);
 
 export { app, analytics };
 
