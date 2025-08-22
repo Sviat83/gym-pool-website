@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.7fdffc9f.css",
-    "main.js": "/gym-pool-website/static/js/main.e5cdd88a.js",
+    "main.css": "/gym-pool-website/static/css/main.75629b26.css",
+    "main.js": "/gym-pool-website/static/js/main.80bda1f0.js",
     "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
     "static/media/Spa_area.webp": "/gym-pool-website/static/media/Spa_area.3951a2888536ef14a22e.webp",
     "static/media/swimming-pools.webp": "/gym-pool-website/static/media/swimming-pools.241f5affe5bf59116edc.webp",
@@ -18,11 +18,11 @@
     "static/media/Ping_pong.webp": "/gym-pool-website/static/media/Ping_pong.37e5be8628272b4a1427.webp",
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.7fdffc9f.css.map": "/gym-pool-website/static/css/main.7fdffc9f.css.map",
-    "main.e5cdd88a.js.map": "/gym-pool-website/static/js/main.e5cdd88a.js.map"
+    "main.75629b26.css.map": "/gym-pool-website/static/css/main.75629b26.css.map",
+    "main.80bda1f0.js.map": "/gym-pool-website/static/js/main.80bda1f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fdffc9f.css",
-    "static/js/main.e5cdd88a.js"
+    "static/css/main.75629b26.css",
+    "static/js/main.80bda1f0.js"
   ]
 }
