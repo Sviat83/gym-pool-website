@@ -3,15 +3,15 @@ import styles from './Header.module.css';
 import Burger from './Burger/Burger';
 import logoImg from '../../assets/images/logo.png';
 import FeedbackForm from './FeedbackForm';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [showFeedback, setShowFeedback] = useState(false);
+    const currentPath = useLocation();
     
     const toggleMenu = () => setIsOpen(!isOpen);
-    
     const closeFeedback = () => setShowFeedback(false);
     
     useEffect(() => {
@@ -33,6 +33,10 @@ const Header = () => {
             closeFeedback();
         }
     };
+    useEffect(() => {
+        setIsOpen(false);
+    }, [currentPath.pathname]);
+    
 
     return (
         <>
@@ -62,6 +66,7 @@ const Header = () => {
                 
                 <Burger isOpen={isOpen} toggleMenu={toggleMenu} />
             </header>
+
 
             {showFeedback && (
                 <div className={styles.modalBackDrop} onClick={handleBackdropClick}>

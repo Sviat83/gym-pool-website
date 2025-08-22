@@ -2,7 +2,7 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
-  z-index: 30;
+  z-index: 1100;
 }
 .burgerLine {
   width: 30px;
