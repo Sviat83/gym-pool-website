@@ -45,12 +45,12 @@ const Header = () => {
                     <ul className={`${styles.navList} ${isOpen ? styles.navOpen : ''}`}>
                         <li className={styles.navItem}><Link to=''>Про клуб</Link></li>
                         <li className={styles.navItem}><Link to='trainers'>Тренери</Link></li>
-                        <li className={styles.navItem}><a href='#locations'>Локації</a></li>
-                        <li className={styles.navItem}><a href='#club-cards'>Клубні картки</a></li>
-                        <li className={styles.navItem}><a href='#one-time-visit'>Разовий візит</a></li>
-                        <li className={styles.navItem}><a href='#schedule'>Розклад</a></li>
-                        <li className={styles.navItem}><a href='#children-club'>Дитячий клуб</a></li>
-                        <li className={styles.navItem}><a href='#cafe'>Prime Life Club</a></li>
+                        <li className={styles.navItem}><Link to='locations'>Локації</Link></li>
+                        <li className={styles.navItem}><Link to='club-cards'>Клубні картки</Link></li>
+                        <li className={styles.navItem}><Link to='one-time-visit'>Разовий візит</Link></li>
+                        <li className={styles.navItem}><Link to='schedule'>Розклад</Link></li>
+                        <li className={styles.navItem}><Link to='kids-club'>Дитячий клуб</Link></li>
+                        <li className={styles.navItem}><Link to='prime-cafe'>Prime Life Cafe</Link></li>
                     </ul>
                 </nav>
                 <button 

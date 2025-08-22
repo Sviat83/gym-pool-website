@@ -18,10 +18,9 @@ const HomePage = () => {
     "ПРОГРАМИ MIND BODY",
     "СИЛОВИЙ ТА ФУНКЦІОНАЛЬНИЙ ТРЕНІНГ",
     "CYCLE"
-  ]
+  ];
   return (
     <>
-          
       <HeroSection />
       <ScrollingText messages={messages} />
       <InfoStats />
@@ -32,7 +31,7 @@ const HomePage = () => {
       <News />
       <Footer/>
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

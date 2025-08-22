@@ -7,12 +7,12 @@ import Header from '../components/Header/Header'
 const MainLayouts = () => {
   return (
     <>
-<Header />
+      <Header />
 
-     <Outlet/>
+      <Outlet/>
      
     </>
-  )
-}
+  );
+};
 
-export default MainLayouts
+export default MainLayouts;
