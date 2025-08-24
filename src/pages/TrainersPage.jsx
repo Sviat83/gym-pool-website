@@ -1,8 +1,4 @@
 import React from 'react'
+import TrainersPage from '../components/TrainersPage/TrainersPage';
 
-const TrainersPage = () => {
-  return (
-    <div>TrainersPage</div>
-  );
-};
-export default TrainersPage;
+<TrainersPage />

@@ -9,6 +9,7 @@ import ClubCardsSection from '../components/ClubCardsSection/ClubCardsSection'
 import News from '../components/News/News'
 import Footer from '../components/Footer/Footer'
 
+
 const HomePage = () => {
       const messages = [
     "АКВАФІТНЕС",
