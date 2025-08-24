@@ -1,0 +1,47 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 80px; /* щоб модалка не ховалася під Header */
+    z-index: 1200;
+    pointer-events: auto;
+}
+
+.modalContent {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 30px;
+    min-width: 300px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modalContent li {
+    margin-bottom: 12px;
+}
+
+.modalContent li:last-child {
+    margin-bottom: 0;
+}
+
+.modalContent a {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.modalContent a:hover {
+    color: #d22;
+}

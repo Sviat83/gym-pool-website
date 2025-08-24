@@ -117,6 +117,7 @@ export default function ClubCardsSection() {
 
   return (
     <section
+      id="club-cards"
       className="club-cards"
       style={{
         backgroundImage: `url(${bg})`,
