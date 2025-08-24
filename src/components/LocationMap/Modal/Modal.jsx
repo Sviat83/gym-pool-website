@@ -5,7 +5,8 @@ import ModalContent from "./ModalContent";
 const Modal = ({ onClose }) => {
     return (
         <div className={styles.modalOverlay} onClick={onClose}>
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}
+                onMouseLeave={onClose}>
                <ModalContent onClose={onClose} />
             </div>
         </div>
