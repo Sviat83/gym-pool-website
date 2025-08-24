@@ -48,7 +48,7 @@ const Header = () => {
                 <nav className={styles.navMenu}>
                     <ul className={`${styles.navList} ${isOpen ? styles.navOpen : ''}`}>
                         <li className={styles.navItem}><Link to=''>Про клуб</Link></li>
-                        <li className={styles.navItem}><Link to='trainers'>Тренери</Link></li>
+                        <li className={styles.navItem}><Link to="/gym-pool-website/trainers">Тренери</Link></li>
                         <li className={styles.navItem}><Link to='locations'>Локації</Link></li>
                         <li className={styles.navItem}><Link to='club-cards'>Клубні картки</Link></li>
                         <li className={styles.navItem}><Link to='one-time-visit'>Разовий візит</Link></li>
