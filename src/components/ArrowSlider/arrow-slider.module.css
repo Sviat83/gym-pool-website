@@ -1,0 +1,25 @@
+.slider {
+  width: 100%;
+  /* max-width: 960px; */
+  margin: 0 auto;
+  padding: 100px 0;
+  position: relative;
+}
+
+.slide {
+  width: 33%; /* або 100% для адаптивного */
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  height: 360px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

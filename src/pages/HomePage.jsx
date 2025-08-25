@@ -7,7 +7,7 @@ import Advantages from '../components/Advantages/Advantages'
 import Service from '../components/Servises/ServiceSlider';
 import ClubCardsSection from '../components/ClubCardsSection/ClubCardsSection'
 import News from '../components/News/News'
-import Footer from '../components/Footer/Footer'
+
 
 
 const HomePage = () => {
@@ -30,7 +30,7 @@ const HomePage = () => {
       <Service/>
       <ClubCardsSection />
       <News />
-      <Footer/>
+      
     </>
   );
 };
