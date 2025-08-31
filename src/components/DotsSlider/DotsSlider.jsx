@@ -2,20 +2,17 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
-import studio from '../../assets/images/location/studio.webp';
-import pilates from '../../assets/images/location/Pilates.webp';
-import pool from '../../assets/images/location/swimming-pools.webp';
 
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './dots-slider.module.css'
 
-const images = [studio, pilates, pool];
 
-const DotsSlider = () => {
+
+const DotsSlider = ({images , className}) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${className || ''}`}>
       <Swiper
         modules={[Pagination]}
         slidesPerView={1}

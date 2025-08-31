@@ -5,17 +5,23 @@ import ClubCardsSection from "../components/ClubCardsSection/ClubCardsSection";
 import studio from '../assets/images/location/studio.webp';
 import pilates from '../assets/images/location/Pilates.webp';
 import pool from '../assets/images/location/swimming-pools.webp';
+import DotsSlider from "../components/DotsSlider/DotsSlider";
 
 
 
+
+
+const images =[studio , pilates ,pool]
 const items = [studio, pilates, pool, pool, pilates, studio, pilates, pool];
 const ClubCardsPage = () => {
     return (
         <>
              <div style={{backgroundImage:`url(${bg})`}}>
-          <ArrowSlider items={items}/>
-        
+          <ArrowSlider  items={items}/>
+         
         <ClubCardsSection />
+         <DotsSlider images={images} />
+
         </div>
    </>
     );
