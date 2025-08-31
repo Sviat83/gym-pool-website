@@ -3,19 +3,16 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 
-import studio from '../../assets/images/location/studio.webp';
-import pilates from '../../assets/images/location/Pilates.webp';
-import pool from '../../assets/images/location/swimming-pools.webp';
-
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './arrow-slider.module.css'
 
 
-const items = [studio, pilates, pool, pool, pilates, studio, pilates, pool]
 
-const ArrowSlider = () => {
+
+
+const ArrowSlider = ({items}) => {
     return (
         <div className={styles.slider}>
             <Swiper
