@@ -1,9 +1,18 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.e07355ff.css",
-    "main.js": "/gym-pool-website/static/js/main.e03e5988.js",
+    "main.css": "/gym-pool-website/static/css/main.10a96969.css",
+    "main.js": "/gym-pool-website/static/js/main.a548ff05.js",
     "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
+    "static/media/exercise_equipment_area_2.jpg": "/gym-pool-website/static/media/exercise_equipment_area_2.fa4be0e2fdea48278087.jpg",
+    "static/media/weights_zone.jpg": "/gym-pool-website/static/media/weights_zone.ebc316375a24bab689cf.jpg",
+    "static/media/exercise_equipment_area_1.jpg": "/gym-pool-website/static/media/exercise_equipment_area_1.4759e11f40bd15adbe7c.jpg",
+    "static/media/core-stretching-zone_2.jpg": "/gym-pool-website/static/media/core-stretching-zone_2.598b2b2560ac449a29ee.jpg",
+    "static/media/crossfit-functional-zone_1.jpg": "/gym-pool-website/static/media/crossfit-functional-zone_1.522cf58e97993944f49e.jpg",
+    "static/media/crossfit-functional-zone_2.jpg": "/gym-pool-website/static/media/crossfit-functional-zone_2.522cf58e97993944f49e.jpg",
+    "static/media/core-stretching-zone_1.jpg": "/gym-pool-website/static/media/core-stretching-zone_1.71b280976312d95b0a68.jpg",
     "static/media/Spa_area.webp": "/gym-pool-website/static/media/Spa_area.3951a2888536ef14a22e.webp",
+    "static/media/fon.webp": "/gym-pool-website/static/media/fon.97ceb0a1647d30023283.webp",
+    "static/media/gym_cardio-equipment_2.webp": "/gym-pool-website/static/media/gym_cardio-equipment_2.5a05a5bb0a85815a7fc0.webp",
     "static/media/swimming-pools.webp": "/gym-pool-website/static/media/swimming-pools.241f5affe5bf59116edc.webp",
     "static/media/studio.webp": "/gym-pool-website/static/media/studio.ff14f97949570abed96f.webp",
     "static/media/advantages_parking.webp": "/gym-pool-website/static/media/advantages_parking.c56c107b657d8a7b61ec.webp",
@@ -11,6 +20,7 @@
     "static/media/kids_club.webp": "/gym-pool-website/static/media/kids_club.037cb7e2d98c103b2e7d.webp",
     "static/media/advantages_studio.webp": "/gym-pool-website/static/media/advantages_studio.c6b7d38c6d949c67c3ef.webp",
     "static/media/Pilates.webp": "/gym-pool-website/static/media/Pilates.8947c7ef31599d6c2225.webp",
+    "static/media/gym_cardio-equipment_1.webp": "/gym-pool-website/static/media/gym_cardio-equipment_1.cf7fd9b7c903b835b8e7.webp",
     "static/media/advantages_gym.webp": "/gym-pool-website/static/media/advantages_gym.233a0882dd7f6fd7a3cd.webp",
     "static/media/Gym.webp.webp": "/gym-pool-website/static/media/Gym.webp.3501b00f5dab1559a4d5.webp",
     "static/media/advantages_kids.webp": "/gym-pool-website/static/media/advantages_kids.5012536a6dca24de15e4.webp",
@@ -18,11 +28,11 @@
     "static/media/Ping_pong.webp": "/gym-pool-website/static/media/Ping_pong.37e5be8628272b4a1427.webp",
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.e07355ff.css.map": "/gym-pool-website/static/css/main.e07355ff.css.map",
-    "main.e03e5988.js.map": "/gym-pool-website/static/js/main.e03e5988.js.map"
+    "main.10a96969.css.map": "/gym-pool-website/static/css/main.10a96969.css.map",
+    "main.a548ff05.js.map": "/gym-pool-website/static/js/main.a548ff05.js.map"
   },
   "entrypoints": [
-    "static/css/main.e07355ff.css",
-    "static/js/main.e03e5988.js"
+    "static/css/main.10a96969.css",
+    "static/js/main.a548ff05.js"
   ]
 }
