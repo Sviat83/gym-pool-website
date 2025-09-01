@@ -1,4 +1,6 @@
 import React from "react";
+
+
 import ArrowSlider from "../components/ArrowSlider/ArrowSlider";
 import bg from  '../assets/images/Advantages/fon.webp'
 import ClubCardsSection from "../components/ClubCardsSection/ClubCardsSection";
