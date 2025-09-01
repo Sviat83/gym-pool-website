@@ -6,7 +6,7 @@ import FeedbackForm from './FeedbackForm';
 import Modal from '../LocationMap/Modal/Modal';
 import { Link, useLocation } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ bg }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [showFeedback, setShowFeedback] = useState(false);
@@ -39,7 +39,13 @@ const Header = () => {
     
     return (
         <>
-            <header className={`${styles.header} ${isScrolled ? styles.headerScrolles : ''}`}>
+            <header 
+                className={`${styles.header} ${isScrolled ? styles.headerScrolles : ''}`}
+                 style={
+                bg && !isScrolled
+                        ? { backgroundColor: 'transparent' } 
+                        : { backgroundColor: '#1f2937' }}
+                >    
                 <div className={styles.logoWrapper}>
                     <img src={logoImg} alt="Logo" className={styles.logoImg} />
                     <div className={styles.logo}>Prime Life Club</div>

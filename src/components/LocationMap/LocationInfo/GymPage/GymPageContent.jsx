@@ -1,13 +1,20 @@
 import React from "react";
-import CtaButton from "../../../Button/CtaButton";
+import gymData from "../../../LocationMap/data/gymData.json";
+import GymHeaderSection from "./GymHeaderSection/GymHeaderSection";
+import ZoneList from "../GymPage/ZonesList/ZonesList";
+import ClubCardsSection from "../../../ClubCardsSection/ClubCardsSection";
+import styles from "./GymPageContent.module.css";
 
-const GymPageContent = () => {
+
+function GymPageContent () {
     return (
-        <div>
-            <h3>ggg</h3>
-            
-            <CtaButton to="club-cards">Придбати картку</CtaButton>
+        <div className={styles.gymPageContainer}>
+            <GymHeaderSection />
 
+            <ZoneList zones={gymData.zones} />
+
+            <ClubCardsSection />
+            
         </div>
     )    
 };

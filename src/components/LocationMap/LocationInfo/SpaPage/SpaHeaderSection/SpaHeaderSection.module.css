@@ -1,0 +1,47 @@
+.spaHeaderSection {
+    position: relative;
+    text-align: center;
+    padding: 180px 60px 80px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    user-select: none;
+}
+.spaHeaderSectionLeft {
+    max-width: 60%; 
+    text-align: left; 
+}
+
+.spaHeaderSectionRight {
+    display: flex;
+    justify-content: flex-end; 
+}
+.spaTitle {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.spaDesc {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 768px) {
+  .spaHeaderSection {
+    padding: 120px 16px 80px;
+  }
+  .spaTitle {
+    font-size: 36px;
+  }
+  .spaDesc {
+    font-size: 16px;
+  }
+}  

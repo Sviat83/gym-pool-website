@@ -1,5 +1,5 @@
 import React from "react";
-import BoxingPageContent from "../components/LocationMap/LocationInfo/BoxingPage/BoxingPageContent"
+import BoxingPageContent from "../components/LocationMap/LocationInfo/BoxingPage/BoxingPageContent";
 
 const BoxingPage = () => {
     return (
