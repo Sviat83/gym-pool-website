@@ -8,22 +8,29 @@
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 6px 12px rgba(239, 68, 68, 0.6);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
     user-select: none;
 }
 .cta:hover,
 .cta:focus {
     background-color: #b91c1c;
     box-shadow: 0 8px 20px rgba(185, 28, 28, 0.7);
-    outline: none;
 }
+.cta:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 8px rgba(185, 28, 28, 0.6);
+}
+.cta:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
 @media (max-width: 768px) {
       .cta {
         margin-top: 30px;
         padding: 12px 30px;
         font-size: 16px; 
         border-radius: 25px;
-        box-shadow: 0 4px 10px rgba(239, 68, 68, 0.5);
     }
 }    
