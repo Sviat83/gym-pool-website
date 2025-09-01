@@ -1,23 +1,26 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-
-
-
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './dots-slider.module.css'
 
 
 
-const DotsSlider = ({images , className}) => {
+const DotsSlider = ({ images, className }) => {
   return (
     <div className={`${styles.wrapper} ${className || ''}`}>
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination ,Autoplay]}
+        speed={1000}
         slidesPerView={1}
-        loop ={true}
+        loop={true}
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
       >
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>

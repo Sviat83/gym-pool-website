@@ -13,7 +13,7 @@ import TableTennisPage from "../pages/TableTennisPage";
 import ClubCardsPage from "../pages/ClubCardsPage";
 import OneTimeVisitPage from "../pages/OneTimeVisitPage";
 import SchedulePage from "../pages/SchedulePage";
-import KidsClubPage from "../pages/KidsClubPage";
+import KidsClubPage from "../pages/kids-club/KidsClubPage";
 import PrimeCafePage from "../pages/PrimeCafePage";
 
 export const routes = createBrowserRouter([
