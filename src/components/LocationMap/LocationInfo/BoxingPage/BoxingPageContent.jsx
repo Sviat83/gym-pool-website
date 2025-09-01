@@ -1,4 +1,5 @@
 import React from "react";
+
 import boxingData from "../../../LocationMap/data/boxingData.json";
 import BoxingHeaderSection from "./BoxingHeaderSection/BoxingHeaderSection";
 import BoxingMainPart from "./BoxingMainPart/BoxingMainPart";
