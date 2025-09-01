@@ -1,6 +1,7 @@
 import React from "react";
-// import gymData from "../../../LocationMap/data/gymData.json";
+import boxingData from "../../../LocationMap/data/boxingData.json";
 import BoxingHeaderSection from "./BoxingHeaderSection/BoxingHeaderSection";
+import BoxingMainPart from "./BoxingMainPart/BoxingMainPart";
 import ClubCardsSection from "../../../ClubCardsSection/ClubCardsSection";
 import styles from "./BoxingPageContent.module.css";
 
@@ -9,6 +10,8 @@ function BoxingPageContent () {
     return (
         <div className={styles.boxingPageContainer}>
             <BoxingHeaderSection />
+
+            <BoxingMainPart zones={boxingData.zones} />
 
             <ClubCardsSection />
             
