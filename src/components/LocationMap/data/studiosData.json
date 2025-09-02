@@ -1,0 +1,38 @@
+{
+    "zones": [
+        {
+            "id": "fly-yoga-zone",
+            "title": "Флай йога",
+            "description": "Заняття, які допомагають відновити внутрішній баланс, підвищити концентрацію, зміцнити фізичне здоров’я та знизити рівень стресу. Програма адаптована для досягнення гармонії та внутрішнього спокою.", 
+            "equipment": [
+                { "name": "Флай йога 1", "img": "fly_yoga_1.jpg" },    
+                { "name": "Флай йога 2", "img": "fly_yoga_2.jpg" }
+            ]    
+        },
+        {
+            "id": "сycling-zone",
+            "title": "Сайкл",
+            "description": "Велотренажери BODY BIKE Classic Connect Hot забезпечують високотехнологічне і динамічне тренування, яке триває від 40 до 60 хвилин. Сайклінг проводять у групах, де під запальну музику та з підтримкою тренера учасники інтенсивно змінюють темп, імітуючи підйоми та спуски. Тренування включають нахили для посилення м’язів корпусу, а великий екран з візуалізацією трас створює ефект повного занурення в процес.", 
+            "equipment": [
+                { "name": "сycling_1", "img": "сycling_1.jpg" },    
+                { "name": "сycling_2", "img": "сycling_2.jpg" }
+            ]    
+        },
+        {
+            "id": "mind-body-zone",
+            "title": "Mind body",
+            "equipment": [
+                { "name": "mind-body_1", "img": "mind-body_1.jpg" },
+                { "name": "mind-body_2", "img": "mind-body_2.jpg" }
+            ]    
+        },
+        {
+            "id": "functional-training-zone",
+            "title": "Функціональні тренування", 
+            "equipment": [
+                { "name": "functional-training_1", "img": "functional-training_1.jpg" },    
+                { "name": "functional-training_2", "img": "functional-training_2.jpg" }
+            ]    
+        }
+    ] 
+}
