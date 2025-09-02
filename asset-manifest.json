@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.2a42016a.css",
-    "main.js": "/gym-pool-website/static/js/main.ee0158b1.js",
+    "main.css": "/gym-pool-website/static/css/main.fb37d30a.css",
+    "main.js": "/gym-pool-website/static/js/main.39a247f2.js",
     "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
     "static/media/adult-pool_2.jpg": "/gym-pool-website/static/media/adult-pool_2.48bbfca1532276bfcf2e.jpg",
     "static/media/adult-pool_1.jpg": "/gym-pool-website/static/media/adult-pool_1.f109f5f801a72e243c68.jpg",
@@ -43,7 +43,7 @@
     "static/media/table-tennis_6.jpg": "/gym-pool-website/static/media/table-tennis_6.bd9ed01e148e7ec0a48d.jpg",
     "static/media/core-stretching-zone_1.jpg": "/gym-pool-website/static/media/core-stretching-zone_1.71b280976312d95b0a68.jpg",
     "static/media/Spa_area.webp": "/gym-pool-website/static/media/Spa_area.3951a2888536ef14a22e.webp",
-    "static/media/adult-pool_5.jpg": "/gym-pool-website/static/media/adult-pool_5.e6f4c86fc4f3e7fce443.jpg",
+    "static/media/adult-pool-5.jpg": "/gym-pool-website/static/media/adult-pool-5.e6f4c86fc4f3e7fce443.jpg",
     "static/media/kids-lego.jpg": "/gym-pool-website/static/media/kids-lego.214602fc4934fc16c1cc.jpg",
     "static/media/fon.webp": "/gym-pool-website/static/media/fon.97ceb0a1647d30023283.webp",
     "static/media/gym_cardio-equipment_2.webp": "/gym-pool-website/static/media/gym_cardio-equipment_2.5a05a5bb0a85815a7fc0.webp",
@@ -63,11 +63,11 @@
     "static/media/Ping_pong.webp": "/gym-pool-website/static/media/Ping_pong.37e5be8628272b4a1427.webp",
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.2a42016a.css.map": "/gym-pool-website/static/css/main.2a42016a.css.map",
-    "main.ee0158b1.js.map": "/gym-pool-website/static/js/main.ee0158b1.js.map"
+    "main.fb37d30a.css.map": "/gym-pool-website/static/css/main.fb37d30a.css.map",
+    "main.39a247f2.js.map": "/gym-pool-website/static/js/main.39a247f2.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a42016a.css",
-    "static/js/main.ee0158b1.js"
+    "static/css/main.fb37d30a.css",
+    "static/js/main.39a247f2.js"
   ]
 }
