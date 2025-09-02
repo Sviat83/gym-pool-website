@@ -11,14 +11,18 @@ function TableTennisMainPart ({ zones }) {
         >
           <div className={styles.zoneContent}>
             <div className={styles.imageWrapper}>
-              {zone.equipment.map((item, idx) => (
+              {zone.equipment.map((item, idx) => {
+                const delay = (idx * 10) / zone.equipment.length; 
+                return (
                 <img
                   key={idx}
                   src={require(`../../../../../assets/images/table-tennis/${item.img}`)}
                   alt={item.name}
                   className={styles.zoneImage}
-                />
-              ))}
+                  style={{ animationDelay: `${delay}s` }}
+                  />
+                );
+              })}
             </div>
             <div className={styles.textBlock}>
               <h3>{zone.title}</h3>
