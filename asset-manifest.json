@@ -1,19 +1,37 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.4687bf92.css",
-    "main.js": "/gym-pool-website/static/js/main.a4efd59c.js",
+    "main.css": "/gym-pool-website/static/css/main.b75e8492.css",
+    "main.js": "/gym-pool-website/static/js/main.9d27c1eb.js",
     "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
+    "static/media/adult-pool_2.jpg": "/gym-pool-website/static/media/adult-pool_2.48bbfca1532276bfcf2e.jpg",
+    "static/media/adult-pool_1.jpg": "/gym-pool-website/static/media/adult-pool_1.f109f5f801a72e243c68.jpg",
+    "static/media/fly_yoga_1.jpg": "/gym-pool-website/static/media/fly_yoga_1.a2007276870639e34cca.jpg",
+    "static/media/functional-training_1.jpg": "/gym-pool-website/static/media/functional-training_1.f0ab24c2fc2e6b30f1e7.jpg",
     "static/media/exercise_equipment_area_2.jpg": "/gym-pool-website/static/media/exercise_equipment_area_2.fa4be0e2fdea48278087.jpg",
     "static/media/weights_zone.jpg": "/gym-pool-website/static/media/weights_zone.ebc316375a24bab689cf.jpg",
+    "static/media/functional-training_2.jpg": "/gym-pool-website/static/media/functional-training_2.7c2bf5127dede83f187a.jpg",
+    "static/media/pilates_2.jpg": "/gym-pool-website/static/media/pilates_2.5a3965b0c646ddfb3152.jpg",
+    "static/media/mind-body_1.jpg": "/gym-pool-website/static/media/mind-body_1.43519b7c9c8cd365ff1d.jpg",
     "static/media/boxing_1.jpg": "/gym-pool-website/static/media/boxing_1.af9aaf5a9bd9127769f1.jpg",
+    "static/media/kids-pool_3.jpg": "/gym-pool-website/static/media/kids-pool_3.b2fd54e0b4102b18468f.jpg",
+    "static/media/pilates_1.jpg": "/gym-pool-website/static/media/pilates_1.1892e7e7cb9b7613a2df.jpg",
+    "static/media/adult-pool_4.jpg": "/gym-pool-website/static/media/adult-pool_4.46735ff144e07dcbeae0.jpg",
+    "static/media/adult-pool_3.jpg": "/gym-pool-website/static/media/adult-pool_3.0439c1221175204c4609.jpg",
+    "static/media/mind-body_2.jpg": "/gym-pool-website/static/media/mind-body_2.36dfaa3e8083d768de2b.jpg",
     "static/media/exercise_equipment_area_1.jpg": "/gym-pool-website/static/media/exercise_equipment_area_1.4759e11f40bd15adbe7c.jpg",
     "static/media/core-stretching-zone_2.jpg": "/gym-pool-website/static/media/core-stretching-zone_2.598b2b2560ac449a29ee.jpg",
+    "static/media/kids-pool_4.jpg": "/gym-pool-website/static/media/kids-pool_4.4256cb32d661b8737c73.jpg",
     "static/media/crossfit-functional-zone_1.jpg": "/gym-pool-website/static/media/crossfit-functional-zone_1.522cf58e97993944f49e.jpg",
     "static/media/crossfit-functional-zone_2.jpg": "/gym-pool-website/static/media/crossfit-functional-zone_2.522cf58e97993944f49e.jpg",
     "static/media/boxing_2.jpg": "/gym-pool-website/static/media/boxing_2.557228de3885c8e14e97.jpg",
+    "static/media/сycling_2.jpg": "/gym-pool-website/static/media/сycling_2.abbd7af7956c6b0272f1.jpg",
+    "static/media/kids-pool_2.jpg": "/gym-pool-website/static/media/kids-pool_2.90a8ef9b8240fc0156a9.jpg",
+    "static/media/kids-pool_1.jpg": "/gym-pool-website/static/media/kids-pool_1.c51165f88da41d75d6c8.jpg",
+    "static/media/сycling_1.jpg": "/gym-pool-website/static/media/сycling_1.ea2879c9aa85ee0ac11c.jpg",
     "static/media/kids-elephant.jpg": "/gym-pool-website/static/media/kids-elephant.3bb5a5c304d0365d921c.jpg",
     "static/media/core-stretching-zone_1.jpg": "/gym-pool-website/static/media/core-stretching-zone_1.71b280976312d95b0a68.jpg",
     "static/media/Spa_area.webp": "/gym-pool-website/static/media/Spa_area.3951a2888536ef14a22e.webp",
+    "static/media/adult-pool_5.jpg": "/gym-pool-website/static/media/adult-pool_5.e6f4c86fc4f3e7fce443.jpg",
     "static/media/kids-lego.jpg": "/gym-pool-website/static/media/kids-lego.214602fc4934fc16c1cc.jpg",
     "static/media/fon.webp": "/gym-pool-website/static/media/fon.97ceb0a1647d30023283.webp",
     "static/media/gym_cardio-equipment_2.webp": "/gym-pool-website/static/media/gym_cardio-equipment_2.5a05a5bb0a85815a7fc0.webp",
@@ -33,11 +51,11 @@
     "static/media/Ping_pong.webp": "/gym-pool-website/static/media/Ping_pong.37e5be8628272b4a1427.webp",
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.4687bf92.css.map": "/gym-pool-website/static/css/main.4687bf92.css.map",
-    "main.a4efd59c.js.map": "/gym-pool-website/static/js/main.a4efd59c.js.map"
+    "main.b75e8492.css.map": "/gym-pool-website/static/css/main.b75e8492.css.map",
+    "main.9d27c1eb.js.map": "/gym-pool-website/static/js/main.9d27c1eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.4687bf92.css",
-    "static/js/main.a4efd59c.js"
+    "static/css/main.b75e8492.css",
+    "static/js/main.9d27c1eb.js"
   ]
 }
