@@ -16,11 +16,11 @@
                 "- тренування на САП дошках (за додаткову оплату)."
             ],
             "equipment": [
-                { "name": "adult-pool_1", "img": "adult-pool-1.jpg" },    
-                { "name": "adult-pool_2", "img": "adult-pool-2.jpg" },
-                { "name": "adult-pool_3", "img": "adult-pool-3.jpg" },
-                { "name": "adult-pool_4", "img": "adult-pool-4.jpg" },
-                { "name": "adult-pool_5", "img": "adult-pool-5.jpg" }
+                { "name": "adult-pool_1", "img": "adult-pool_1.jpg" },    
+                { "name": "adult-pool_2", "img": "adult-pool_2.jpg" },
+                { "name": "adult-pool_3", "img": "adult-pool_3.jpg" },
+                { "name": "adult-pool_4", "img": "adult-pool_4.jpg" },
+                { "name": "adult-pool_5", "img": "adult-pool_5.jpg" }
             ] 
         },
         {

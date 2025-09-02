@@ -1,0 +1,15 @@
+{
+    "zones": [
+        {
+            "id": "table-tennis-zone",
+            "title": "Настільний теніс",
+            "equipment": [
+                { "name": "table-tennis_1", "img": "table-tennis_1.jpg" },    
+                { "name": "table-tennis_2", "img": "table-tennis_2.jpg" },
+                { "name": "table-tennis_3", "img": "table-tennis_3.jpg" },
+                { "name": "table-tennis_4", "img": "table-tennis_4.jpg" },
+                { "name": "table-tennis_5", "img": "table-tennis_5.jpg" }
+            ] 
+        }       
+    ] 
+}
