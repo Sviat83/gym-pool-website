@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.b75e8492.css",
-    "main.js": "/gym-pool-website/static/js/main.9d27c1eb.js",
+    "main.css": "/gym-pool-website/static/css/main.2a42016a.css",
+    "main.js": "/gym-pool-website/static/js/main.ee0158b1.js",
     "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
     "static/media/adult-pool_2.jpg": "/gym-pool-website/static/media/adult-pool_2.48bbfca1532276bfcf2e.jpg",
     "static/media/adult-pool_1.jpg": "/gym-pool-website/static/media/adult-pool_1.f109f5f801a72e243c68.jpg",
@@ -14,6 +14,7 @@
     "static/media/mind-body_1.jpg": "/gym-pool-website/static/media/mind-body_1.43519b7c9c8cd365ff1d.jpg",
     "static/media/boxing_1.jpg": "/gym-pool-website/static/media/boxing_1.af9aaf5a9bd9127769f1.jpg",
     "static/media/kids-pool_3.jpg": "/gym-pool-website/static/media/kids-pool_3.b2fd54e0b4102b18468f.jpg",
+    "static/media/spa_1.jpg": "/gym-pool-website/static/media/spa_1.5354beb6a01226a2ca76.jpg",
     "static/media/pilates_1.jpg": "/gym-pool-website/static/media/pilates_1.1892e7e7cb9b7613a2df.jpg",
     "static/media/adult-pool_4.jpg": "/gym-pool-website/static/media/adult-pool_4.46735ff144e07dcbeae0.jpg",
     "static/media/adult-pool_3.jpg": "/gym-pool-website/static/media/adult-pool_3.0439c1221175204c4609.jpg",
@@ -28,7 +29,18 @@
     "static/media/kids-pool_2.jpg": "/gym-pool-website/static/media/kids-pool_2.90a8ef9b8240fc0156a9.jpg",
     "static/media/kids-pool_1.jpg": "/gym-pool-website/static/media/kids-pool_1.c51165f88da41d75d6c8.jpg",
     "static/media/сycling_1.jpg": "/gym-pool-website/static/media/сycling_1.ea2879c9aa85ee0ac11c.jpg",
+    "static/media/table-tennis_5.jpg": "/gym-pool-website/static/media/table-tennis_5.445df7e2a790fed614db.jpg",
+    "static/media/spa_6.jpg": "/gym-pool-website/static/media/spa_6.ab0688ad3bf87d24ccd7.jpg",
+    "static/media/spa_3.jpg": "/gym-pool-website/static/media/spa_3.4e644d64eb869b91a480.jpg",
+    "static/media/table-tennis_1.jpg": "/gym-pool-website/static/media/table-tennis_1.e27bbfcc949d4f83e799.jpg",
+    "static/media/table-tennis_3.jpg": "/gym-pool-website/static/media/table-tennis_3.6af912a4858616f70cb2.jpg",
+    "static/media/spa_2.jpg": "/gym-pool-website/static/media/spa_2.81d83c24380e55c19deb.jpg",
+    "static/media/table-tennis_2.jpg": "/gym-pool-website/static/media/table-tennis_2.ffa7c59b8d8184311a32.jpg",
     "static/media/kids-elephant.jpg": "/gym-pool-website/static/media/kids-elephant.3bb5a5c304d0365d921c.jpg",
+    "static/media/spa_4.jpg": "/gym-pool-website/static/media/spa_4.2493b669841505945858.jpg",
+    "static/media/spa_5.jpg": "/gym-pool-website/static/media/spa_5.2493b669841505945858.jpg",
+    "static/media/table-tennis_4.jpg": "/gym-pool-website/static/media/table-tennis_4.1d9fb94a04de096d1290.jpg",
+    "static/media/table-tennis_6.jpg": "/gym-pool-website/static/media/table-tennis_6.bd9ed01e148e7ec0a48d.jpg",
     "static/media/core-stretching-zone_1.jpg": "/gym-pool-website/static/media/core-stretching-zone_1.71b280976312d95b0a68.jpg",
     "static/media/Spa_area.webp": "/gym-pool-website/static/media/Spa_area.3951a2888536ef14a22e.webp",
     "static/media/adult-pool_5.jpg": "/gym-pool-website/static/media/adult-pool_5.e6f4c86fc4f3e7fce443.jpg",
@@ -51,11 +63,11 @@
     "static/media/Ping_pong.webp": "/gym-pool-website/static/media/Ping_pong.37e5be8628272b4a1427.webp",
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.b75e8492.css.map": "/gym-pool-website/static/css/main.b75e8492.css.map",
-    "main.9d27c1eb.js.map": "/gym-pool-website/static/js/main.9d27c1eb.js.map"
+    "main.2a42016a.css.map": "/gym-pool-website/static/css/main.2a42016a.css.map",
+    "main.ee0158b1.js.map": "/gym-pool-website/static/js/main.ee0158b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.b75e8492.css",
-    "static/js/main.9d27c1eb.js"
+    "static/css/main.2a42016a.css",
+    "static/js/main.ee0158b1.js"
   ]
 }
