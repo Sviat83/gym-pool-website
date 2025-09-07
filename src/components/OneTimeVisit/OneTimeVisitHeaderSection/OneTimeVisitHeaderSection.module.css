@@ -1,0 +1,82 @@
+.oneTimeVisitHeaderSection {
+    position: relative;
+    text-align: center;
+    padding: 120px 60px 80px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    user-select: none;
+    
+}
+
+
+.oneTimeVisitBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    gap: 20px; 
+    position: relative;
+    z-index: 2;;
+}
+.oneTimeVisitHeaderSectionLeft {
+    max-width: 60%; 
+    text-align: left; 
+}
+
+.oneTimeVisitHeaderSectionRight {
+    display: flex;
+    justify-content: flex-end; 
+}
+.swiper-slide, .slide {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zoneImage {
+   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visitTitle {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.visitDesc {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+@media (max-width: 768px) {
+  .oneTimeVisitHeaderSection {
+    padding: 120px 16px 80px;
+  }
+  .visitTitle {
+    font-size: 36px;
+  }
+  .visitDesc {
+    font-size: 16px;
+  }
+    .swiper-slide, .slide {
+    width: 90%;
+    height: auto; 
+  }
+  .zoneImage {
+    height: auto;
+  }
+}  
