@@ -9,6 +9,7 @@ import pilatesBg from '../assets/images/location/LocationBakground.jpg.webp';
 import aquaBg from '../assets/images/location/LocationBakground.jpg.webp';
 import spaBg from '../assets/images/location/LocationBakground.jpg.webp';
 import tennisBg from '../assets/images/location/LocationBakground.jpg.webp';
+import visitBg from '../assets/images/location/LocationBakground.jpg.webp';
 
 const pageHeaderBg = {
   '/gym-pool-website/gym': gymBg,
@@ -17,7 +18,8 @@ const pageHeaderBg = {
   '/gym-pool-website/pilates': pilatesBg,
   '/gym-pool-website/aquazone': aquaBg,
   '/gym-pool-website/spa': spaBg,
-  '/gym-pool-website/table-tennis': tennisBg
+  '/gym-pool-website/table-tennis': tennisBg,
+  '/gym-pool-website/one-time-visit': visitBg
 };
 const MainLayouts = () => {
   const location = useLocation();

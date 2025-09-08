@@ -13,7 +13,7 @@ import pool from '../assets/images/location/swimming-pools.webp';
 
 
 
-const items = [studio, pilates, pool, pool, pilates, studio, pilates, pool];
+const items = [studio, pilates, pool, pilates, studio, pilates, pool];
 const ClubCardsPage = () => {
     return (
         <>

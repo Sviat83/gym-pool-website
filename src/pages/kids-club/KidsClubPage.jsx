@@ -6,11 +6,16 @@ import lego from '../../assets/images/kids-club/kids-lego.jpg'
 import elephant from '../../assets/images/kids-club/kids-elephant.jpg'
 import equipment from '../../assets/images/kids-club/kids-equipment.webp'
 import club from '../../assets/images/kids-club/kids_club.webp'
+import gymnastics from '../../assets/images/kids-club/kids-gymnastics.jpg'
+import gymnastics2 from '../../assets/images/kids-club/kids-gymnastics2.webp'
 import bg from '../../assets/images/Advantages/fon.webp'
 import DotsSlider from '../../components/DotsSlider/DotsSlider';
+import KidsTraining from '../../components/KidsTraining/KidsTraining';
 
 
-const images = [lego, elephant, equipment, club]
+const images = [lego, elephant, equipment, club];
+const dotsSlider1 =[elephant,lego];
+const dotsSlider2 =[gymnastics,gymnastics2];
 
 const KidsClubPage = () => {
   return (
@@ -33,7 +38,7 @@ const KidsClubPage = () => {
       </section>
       <section className={styles.sliders}>
         <div className={styles.slidersItems}>
-          <DotsSlider images={images} className={styles.slider} />
+          <DotsSlider images={dotsSlider1} className={styles.slider} />
           <div className={styles.slidersInfo}>
             <h3 className={styles.slidersTitle}>Ігрова кімната та дитячий фітнес-зал у клубі UNI FORCE</h3>
             <p><b>Ігрова кімната</b> – простір для дітей до 10 років, де вони можуть грати, спілкуватися, малювати та насолоджуватися настільними іграми.</p>
@@ -41,7 +46,7 @@ const KidsClubPage = () => {
           </div>
         </div>
         <div className={styles.slidersItems}>
-          <DotsSlider images={images} className={styles.slider} />
+          <DotsSlider images={dotsSlider2} className={styles.slider} />
           <div className={styles.slidersInfo}>
             <h3 className={styles.slidersTitle}>Програми та активності для дітей у клубі UNI FORCE</h3>
             <p>Ми пропонуємо широкий вибір програм для дітей різних вікових груп, які сприяють фізичному розвитку, творчості та здоровому способу життя:</p>
@@ -56,11 +61,13 @@ const KidsClubPage = () => {
               <li>Креативні заняття</li>
               <li>Рухливі ігри та квести</li>
             </ul>
+          
 
           </div>
             
         </div>
       </section>
+          <KidsTraining/>
     </>
   );
 };

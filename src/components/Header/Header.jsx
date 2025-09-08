@@ -44,8 +44,9 @@ const Header = ({ bg }) => {
                  style={
                 bg && !isScrolled
                         ? { backgroundColor: 'transparent' } 
-                        : { backgroundColor: '#1f2937' }}
+                        : {}}
                 >    
+                {/* { backgroundColor: '#1f2937' } */}
                 <div className={styles.logoWrapper}>
                     <img src={logoImg} alt="Logo" className={styles.logoImg} />
                     <div className={styles.logo}>Prime Life Club</div>
