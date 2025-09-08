@@ -7,6 +7,7 @@ import ClubCardsSection from "../components/ClubCardsSection/ClubCardsSection";
 import studio from '../assets/images/location/studio.webp';
 import pilates from '../assets/images/location/Pilates.webp';
 import pool from '../assets/images/location/swimming-pools.webp';
+import PurchaseModal from "../components/OneTimeVisit/PurchaseModal/PurchaseModal";
 
 
 
@@ -21,7 +22,7 @@ const ClubCardsPage = () => {
           <ArrowSlider  items={items}/>
          
         <ClubCardsSection />
-     
+       <PurchaseModal/>
 
         </div>
    </>
