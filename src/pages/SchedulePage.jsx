@@ -1,8 +1,6 @@
-import React from "react";
+import React from 'react';
+import SchedulePage from '../components/SchedulePage/SchedulePage';
 
-const SchedulePage = () => {
-    return (
-        <div>SchedulePage</div>
-    );
-};
-export default SchedulePage;
+const Page = () => <SchedulePage />;
+
+export default Page;
