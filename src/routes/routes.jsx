@@ -76,13 +76,11 @@ export const routes = createBrowserRouter([
         { index: true, element: <Dashboard /> },
         { path: "gallery", element: <Gallery /> },
         { path: "settings", element: <Settings /> },
-<<<<<<< HEAD
         { path: "contacts", element: <Contacts />},
-        { path: "ageGroup" , element: <AgeGroupAdmin/>}
-=======
+        { path: "ageGroup" , element: <AgeGroupAdmin/>},
         { path: "contacts", element: <Contacts /> },
         { path: "schedule", element: <Schedule /> }
->>>>>>> a3d808e44e7ea1420033a28e6d37772518704f20
+
       ],
     },
 
