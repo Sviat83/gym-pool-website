@@ -26,6 +26,8 @@ import Settings from "../admin/Modules/Settings/Settings";
 import Contacts from "../admin/Modules/Contacts/Contacts";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import AgeGroupAdmin from "../admin/Modules/AgeGroupAdmin/AgeGroupAdmin";
+import Schedule from "../admin/Modules/Schedule/SchedulePage";
+
 
 // Error
 import ErrorPage from "../pages/ErrorPage";
@@ -52,6 +54,7 @@ export const routes = createBrowserRouter([
       { path: "schedule", element: <SchedulePage /> }, 
       { path: "kids-club", element: <KidsClubPage /> },
       { path: "prime-cafe", element: <PrimeCafePage /> },
+      
     ],
   },
 
@@ -73,8 +76,13 @@ export const routes = createBrowserRouter([
         { index: true, element: <Dashboard /> },
         { path: "gallery", element: <Gallery /> },
         { path: "settings", element: <Settings /> },
+<<<<<<< HEAD
         { path: "contacts", element: <Contacts />},
         { path: "ageGroup" , element: <AgeGroupAdmin/>}
+=======
+        { path: "contacts", element: <Contacts /> },
+        { path: "schedule", element: <Schedule /> }
+>>>>>>> a3d808e44e7ea1420033a28e6d37772518704f20
       ],
     },
 
