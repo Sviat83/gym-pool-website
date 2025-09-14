@@ -17,6 +17,7 @@ const SchedulePage = () => {
   const [scheduleData, setScheduleData] = useState({});
   const [loading, setLoading] = useState(true);
   const [selectedWeek, setSelectedWeek] = useState(getCurrentWeek());
+  const [selectedZone, setSelectedZone] = useState(0);
   const [editingCell, setEditingCell] = useState(null);
   const [editValue, setEditValue] = useState('');
   const [error, setError] = useState('');
@@ -228,7 +229,7 @@ const SchedulePage = () => {
     <div className={styles.schedulePage}>
       {/* Заголовок з навігацією */}
       <div className={styles.header}>
-        <h1>РОЗКЛАД - ТРЕНАЖЕРНИЙ ЗАЛ</h1>
+        <h1>РОЗКЛАД - {zones[selectedZone]}</h1>
         <div className={styles.navigation}>
           <button onClick={() => navigateWeek(-1)} className={styles.navBtn}>←</button>
           <span className={styles.weekInfo}>
@@ -254,7 +255,8 @@ const SchedulePage = () => {
         {zones.map((zone, index) => (
           <button
             key={zone}
-            className={`${styles.zoneBtn} ${index === 0 ? styles.activeZone : ''}`}
+            className={`${styles.zoneBtn} ${index === selectedZone ? styles.activeZone : ''}`}
+            onClick={() => setSelectedZone(index)}
           >
             {zone}
           </button>
