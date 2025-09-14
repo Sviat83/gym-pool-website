@@ -50,6 +50,14 @@ function Sidebar() {
                 </li>
                 <li>
                     <NavLink
+                        to="/gym-pool-website/admin/AgeGroup"
+                        className={({ isActive }) => isActive ? styles.isActive : ""}
+                    >
+                        Дитячі тренування
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
                         to="/gym-pool-website/admin/contacts"
                         className={({ isActive }) => isActive ? styles.isActive : ""}
                     >

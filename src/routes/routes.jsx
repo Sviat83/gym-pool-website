@@ -25,9 +25,12 @@ import Gallery from "../admin/Modules/Gallery/Gallery";
 import Settings from "../admin/Modules/Settings/Settings";
 import Contacts from "../admin/Modules/Contacts/Contacts";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
+import AgeGroupAdmin from "../admin/Modules/AgeGroupAdmin/AgeGroupAdmin";
 
 // Error
 import ErrorPage from "../pages/ErrorPage";
+
+
 
 export const routes = createBrowserRouter([
   {
@@ -70,7 +73,8 @@ export const routes = createBrowserRouter([
         { index: true, element: <Dashboard /> },
         { path: "gallery", element: <Gallery /> },
         { path: "settings", element: <Settings /> },
-        { path: "contacts", element: <Contacts />}
+        { path: "contacts", element: <Contacts />},
+        { path: "ageGroup" , element: <AgeGroupAdmin/>}
       ],
     },
 

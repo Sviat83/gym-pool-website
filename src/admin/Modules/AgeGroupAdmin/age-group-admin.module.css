@@ -1,0 +1,32 @@
+.wrapper {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.form input {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  width: 100%;
+  font-size: 1rem;
+}
+.trainingBlock {
+  margin-bottom: 1rem;
+}
+button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.status {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
