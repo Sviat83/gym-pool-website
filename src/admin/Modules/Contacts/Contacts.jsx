@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { doc, onSnapshot, setDoc } from "firebase/firestore";
-import { db } from "../../../firebase";
+import { db } from "../../../../src/firebase";
 
-// Importing icons individually to reduce bundle size
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaClock } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { initialContacts } from "../../../data/contactsData";
+
 import styles from "./Contacts.module.css";
 
 function Contacts() {
