@@ -3,7 +3,8 @@ import { doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../../../../src/firebase";
 
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
-import { initialContacts } from "../../../../src/data/contactsData";
+import { initialContacts } from "../../../data/contactsData";
+
 import styles from "./Contacts.module.css";
 
 function Contacts() {

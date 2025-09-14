@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import styles from './SchedulePage.module.css';
-import { zones, scheduleData } from './data/scheduleData';
 import { getWeekDays, getMonthDays } from './utils/dateUtils';
+import {
+  setActiveZone,
+  setViewMode,
+  setCurrentDate,
+  selectActiveZone,
+  selectViewMode,
+  selectCurrentDate,
+  selectZones,
+  selectCurrentZoneSchedule
+} from '../../store/slices/scheduleSlice';
 
 // Import images
 import gymImage from '../../assets/images/gym/gym_cardio-equipment_1.webp';
@@ -26,9 +36,12 @@ const zoneImages = {
 };
 
 const SchedulePage = () => {
-  const [activeZone, setActiveZone] = useState('gym');
-  const [viewMode, setViewMode] = useState('week');
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const dispatch = useDispatch();
+  const activeZone = useSelector(selectActiveZone);
+  const viewMode = useSelector(selectViewMode);
+  const currentDate = useSelector(selectCurrentDate);
+  const zones = useSelector(selectZones);
+  const currentSchedule = useSelector(selectCurrentZoneSchedule);
 
   // scheduleData і zones імпортуються з './data/scheduleData'
 
@@ -53,24 +66,15 @@ const SchedulePage = () => {
       newDate.setMonth(currentDate.getMonth() + direction);
     }
     
-    setCurrentDate(newDate);
+    dispatch(setCurrentDate(newDate.toISOString()));
   };
 
-  const getCurrentSchedule = () => {
-    console.log('Active Zone:', activeZone);
-    console.log('Available Zones:', Object.keys(zones));
-    console.log('All Schedule Data:', scheduleData);
-    console.log('Current Zone Schedule:', scheduleData[activeZone]);
-    if (!scheduleData[activeZone]) {
-      console.warn('No schedule data found for zone:', activeZone);
-    }
-    return scheduleData[activeZone] || {};
-  };
+  // getCurrentSchedule більше не потрібен, оскільки ми використовуємо селектор currentSchedule
 
 
 
   const renderCurrentView = () => {
-    const schedule = getCurrentSchedule();
+    const schedule = currentSchedule;
     switch (viewMode) {
       case 'day':
         return <DayView schedule={schedule} />;
@@ -126,7 +130,7 @@ const SchedulePage = () => {
 
           <ViewModeToggle 
             viewMode={viewMode}
-            onViewModeChange={setViewMode}
+            onViewModeChange={(mode) => dispatch(setViewMode(mode))}
           />
         </div>
 
@@ -136,7 +140,7 @@ const SchedulePage = () => {
             <button
               key={key}
               className={`${styles['zone-btn']} ${activeZone === key ? styles['active'] : ''}`}
-              onClick={() => setActiveZone(key)}
+              onClick={() => dispatch(setActiveZone(key))}
               aria-pressed={activeZone === key}
             >
               {name}
