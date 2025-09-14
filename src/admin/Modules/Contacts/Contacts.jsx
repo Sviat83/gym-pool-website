@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { doc, onSnapshot, setDoc } from "firebase/firestore";
+import { collection, addDoc, query, orderBy, limit, getDocs } from "firebase/firestore";
 import { db } from "../../../../src/firebase";
-
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
-import { initialContacts } from "../../../data/contactsData";
-
 import styles from "./Contacts.module.css";
+import { initialContacts } from "../../../data/contactsData";
 
 function Contacts() {
   const [contacts, setContacts] = useState(initialContacts);
 
   useEffect(() => {
-    const docRef = doc(db, "contacts", "main");
-    const unsubscribe = onSnapshot(docRef, (snap) => {
-      if (snap.exists()) {
-        setContacts(snap.data());
+    const fetchLatest = async () => {
+      const colRef = collection(db, "contacts");
+      const q = query(colRef, orderBy("timestamp", "desc"), limit(1));
+      const snap = await getDocs(q);
+      if (!snap.empty) {
+        setContacts(snap.docs[0].data());
       }
-    });
-    return () => unsubscribe();
+    };
+    fetchLatest();
   }, []);
 
   const handleChange = (e) => {
@@ -25,9 +25,16 @@ function Contacts() {
   };
 
   const handleSave = async () => {
-    const docRef = doc(db, "contacts", "main");
-    await setDoc(docRef, contacts);
-    alert("Контакти успішно збережено!");
+    try {
+      const colRef = collection(db, "contacts");
+      await addDoc(colRef, {
+        ...contacts,
+        timestamp: Date.now(),
+      });
+      alert("Контакти успішно збережено!");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
