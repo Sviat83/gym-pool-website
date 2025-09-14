@@ -1,26 +1,35 @@
 import React, { useState } from 'react'
 import styles from './Advantages.module.css'
-import { items } from './AdvantageList'
 
+import { useAdvantages } from '../../hooks/useAdvantages';
+import { imageMap } from './AdvantageList';
 
 
 const Advantages = () => {
+  const {items ,loading , error} = useAdvantages();
+  const [activeIndex, setActiveIndex] = useState(0);
+  if (loading) return <p>Завантаження </p>;
+  if (error) return <p>Помилка: {error.message}</p>
 
-  const [activeIndex, setActiveIndex] = useState(0)
 
   return (
     <section className={styles.wrapper} >
       <h2 className={styles.title}>Переваги</h2>
       <div className={styles.container}>
         <div className={styles.imageWrapper}>
-          {items.map((item, idx) => (
-            <img
-              key={idx}
-              src={item.image}
+          {items.map((item ,index)=>{
+            const imgSrs = imageMap[item.key];
+            
+            return (
+              <img
+              key={index}
+              src={imgSrs}
               alt={item.title}
-              className={`${styles.image} ${idx === activeIndex ? styles.show : ''}`}
-            />
-          ))}
+              className={`${styles.image} ${index === activeIndex ? styles.show : ''}`}
+              />
+            )
+          })}
+ 
         </div>
         <div className={styles.listWrapper}>
           {items.map((item, idx) => (
