@@ -25,7 +25,7 @@ import Gallery from "../admin/Modules/Gallery/Gallery";
 import Settings from "../admin/Modules/Settings/Settings";
 import Contacts from "../admin/Modules/Contacts/Contacts";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
-
+import Schedule from "../admin/Modules/Schedule/SchedulePage";
 
 // Error
 import ErrorPage from "../pages/ErrorPage";
@@ -50,6 +50,7 @@ export const routes = createBrowserRouter([
       { path: "schedule", element: <SchedulePage /> }, 
       { path: "kids-club", element: <KidsClubPage /> },
       { path: "prime-cafe", element: <PrimeCafePage /> },
+      
     ],
   },
 
@@ -71,7 +72,8 @@ export const routes = createBrowserRouter([
         { index: true, element: <Dashboard /> },
         { path: "gallery", element: <Gallery /> },
         { path: "settings", element: <Settings /> },
-        { path: "contacts", element: <Contacts />}
+        { path: "contacts", element: <Contacts /> },
+        { path: "schedule", element: <Schedule /> }
       ],
     },
 
