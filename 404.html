@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Отримуємо поточний шлях
+    const path = window.location.pathname;
+
+    // Основний підшлях GitHub Pages (твій репозиторій)
+    const base = '/gym-pool-website/';
+
+    // Перенаправляємо на index.html, додаючи hash для збереження шляху
+    window.location.replace(window.location.origin + base + '#' + path);
+  </script>
+</body>
+</html>
