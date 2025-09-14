@@ -1,0 +1,471 @@
+/* Основні стилі сторінки */
+.schedulePage {
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  min-height: 100vh;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Заголовок */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Навігація по тижнях */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.weekInfo {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+/* Кнопки перегляду */
+.viewButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.viewButtons button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.viewButtons .activeView {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+.viewButtons button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Загрузка */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  font-size: 1.5rem;
+  color: #f0f0f0;
+}
+
+/* Помилки */
+.error {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid #dc3545;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+/* Навігація по зонах */
+.zoneNavigation {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.zoneBtn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  border: none;
+  padding: 12px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.zoneBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.activeZone {
+  background: #dc3545 !important;
+  color: white !important;
+}
+
+/* Таблиця розкладу */
+.scheduleTable {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.scheduleTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Заголовки таблиці */
+.scheduleTable thead th {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 8px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.scheduleTable thead th:first-child {
+  width: 80px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.dayHeader {
+  min-width: 140px;
+}
+
+.dayName {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.dayDate {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* Часові слоти */
+.timeSlot {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffd700;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+/* Комірки розкладу */
+.scheduleCell {
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 80px;
+  position: relative;
+}
+
+.cellContent {
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 2px;
+  min-height: 76px;
+  box-sizing: border-box;
+}
+
+.cellContent:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+  color: #ffd700;
+}
+
+.cellContent:empty::before {
+  content: 'Клікніть для редагування';
+  color: #999;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Редагування комірки */
+.editCell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+.editInput {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 2px solid #ffd700;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  outline: none;
+  resize: none;
+}
+
+.editButtons {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.saveBtn,
+.cancelBtn {
+  flex: 1;
+  padding: 4px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.saveBtn {
+  background: #28a745;
+  color: white;
+}
+
+.saveBtn:hover {
+  background: #218838;
+}
+
+.cancelBtn {
+  background: #dc3545;
+  color: white;
+}
+
+.cancelBtn:hover {
+  background: #c82333;
+}
+
+/* Швидке додавання */
+.quickAdd {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.quickAdd h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.quickButtons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.quickBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.quickBtn:hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: #ffd700;
+  color: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* Адаптивність */
+@media (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .navigation {
+    order: 1;
+  }
+  
+  .viewButtons {
+    order: 2;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedulePage {
+    padding: 10px;
+  }
+  
+  .header h1 {
+    font-size: 1.4rem;
+  }
+  
+  .zoneNavigation {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .scheduleTable {
+    overflow-x: auto;
+  }
+  
+  .scheduleTable table {
+    min-width: 800px;
+  }
+  
+  .dayHeader {
+    min-width: 100px;
+  }
+  
+  .timeSlot {
+    padding: 15px 8px;
+    font-size: 1rem;
+  }
+  
+  .cellContent {
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+  
+  .quickButtons {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  
+  .quickBtn {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .weekInfo {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .viewButtons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .scheduleTable table {
+    min-width: 600px;
+  }
+  
+  .dayHeader {
+    min-width: 80px;
+  }
+  
+  .dayDate {
+    font-size: 1.1rem;
+  }
+  
+  .quickButtons {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scheduleTable {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Прокручування таблиці */
+.scheduleTable::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scheduleTable::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.scheduleTable::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.5);
+  border-radius: 4px;
+}
+
+.scheduleTable::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.7);
+}
