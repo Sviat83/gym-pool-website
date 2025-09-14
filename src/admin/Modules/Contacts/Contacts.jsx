@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { doc, onSnapshot, setDoc } from "firebase/firestore";
-import { db } from "../../../firebase";
+import { db } from "../../../../src/firebase";
 
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock } from "react-icons/fa";
-import { initialContacts } from "../../../data/contactsData";
+import { initialContacts } from "../../../../src/data/contactsData";
 import styles from "./Contacts.module.css";
 
 function Contacts() {
