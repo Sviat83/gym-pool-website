@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.244376cd.css",
-    "main.js": "/gym-pool-website/static/js/main.e18bd6e3.js",
+    "main.css": "/gym-pool-website/static/css/main.a22a2b78.css",
+    "main.js": "/gym-pool-website/static/js/main.c9874fe6.js",
     "static/media/finnish_sauna_3.jpg": "/gym-pool-website/static/media/finnish_sauna_3.9cd50c2e65fb23a8d19b.jpg",
     "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
     "static/media/finnish_sauna_2.jpg": "/gym-pool-website/static/media/finnish_sauna_2.10b5a0f2652591930967.jpg",
@@ -42,6 +42,7 @@
     "static/media/сycling_1.jpg": "/gym-pool-website/static/media/сycling_1.ea2879c9aa85ee0ac11c.jpg",
     "static/media/table-tennis_5.jpg": "/gym-pool-website/static/media/table-tennis_5.445df7e2a790fed614db.jpg",
     "static/media/spa_6.jpg": "/gym-pool-website/static/media/spa_6.ab0688ad3bf87d24ccd7.jpg",
+    "static/media/kids-gymnastics.jpg": "/gym-pool-website/static/media/kids-gymnastics.ecd592a608f63c0d52a4.jpg",
     "static/media/spa_3.jpg": "/gym-pool-website/static/media/spa_3.4e644d64eb869b91a480.jpg",
     "static/media/table-tennis_1.jpg": "/gym-pool-website/static/media/table-tennis_1.e27bbfcc949d4f83e799.jpg",
     "static/media/table-tennis_3.jpg": "/gym-pool-website/static/media/table-tennis_3.6af912a4858616f70cb2.jpg",
@@ -55,7 +56,7 @@
     "static/media/table-tennis_6.jpg": "/gym-pool-website/static/media/table-tennis_6.bd9ed01e148e7ec0a48d.jpg",
     "static/media/core-stretching-zone_1.jpg": "/gym-pool-website/static/media/core-stretching-zone_1.71b280976312d95b0a68.jpg",
     "static/media/Spa_area.webp": "/gym-pool-website/static/media/Spa_area.3951a2888536ef14a22e.webp",
-    "static/media/adult-pool-5.jpg": "/gym-pool-website/static/media/adult-pool-5.e6f4c86fc4f3e7fce443.jpg",
+    "static/media/adult-pool_5.jpg": "/gym-pool-website/static/media/adult-pool_5.e6f4c86fc4f3e7fce443.jpg",
     "static/media/kids-lego.jpg": "/gym-pool-website/static/media/kids-lego.214602fc4934fc16c1cc.jpg",
     "static/media/fon.webp": "/gym-pool-website/static/media/fon.97ceb0a1647d30023283.webp",
     "static/media/gym_cardio-equipment_2.webp": "/gym-pool-website/static/media/gym_cardio-equipment_2.5a05a5bb0a85815a7fc0.webp",
@@ -72,15 +73,16 @@
     "static/media/advantages_kids.webp": "/gym-pool-website/static/media/advantages_kids.5012536a6dca24de15e4.webp",
     "static/media/advantages_pool.webp": "/gym-pool-website/static/media/advantages_pool.ddd290f2504e6aaf382f.webp",
     "static/media/kids-equipment.webp": "/gym-pool-website/static/media/kids-equipment.95b8ec360235a8f2b4ad.webp",
+    "static/media/kids-gymnastics2.webp": "/gym-pool-website/static/media/kids-gymnastics2.ec6ad1675d40a6d05b83.webp",
     "static/media/Ping_pong.webp": "/gym-pool-website/static/media/Ping_pong.37e5be8628272b4a1427.webp",
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "static/media/card_purchase.png": "/gym-pool-website/static/media/card_purchase.50ec2dcb4bd23bbcb0fa.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.244376cd.css.map": "/gym-pool-website/static/css/main.244376cd.css.map",
-    "main.e18bd6e3.js.map": "/gym-pool-website/static/js/main.e18bd6e3.js.map"
+    "main.a22a2b78.css.map": "/gym-pool-website/static/css/main.a22a2b78.css.map",
+    "main.c9874fe6.js.map": "/gym-pool-website/static/js/main.c9874fe6.js.map"
   },
   "entrypoints": [
-    "static/css/main.244376cd.css",
-    "static/js/main.e18bd6e3.js"
+    "static/css/main.a22a2b78.css",
+    "static/js/main.c9874fe6.js"
   ]
 }
