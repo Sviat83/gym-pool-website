@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 
-const Footer = () => {
+const Footer = ({ contacts }) => {
   const navigationLinks = [
     "Про клуб",
     "Тренери", 
@@ -32,9 +32,9 @@ const Footer = () => {
         <div className={styles.contactCard}>
           <h3 className={styles.contactTitle}>Контактна інформація</h3>
           <div className={styles.contactInfo}>
-            <p>📍 вул. Кульпарківська 226А</p>
-            <p>📞 +380987072572</p>
-            <p>🕒 Пн-Нд: 06:00 - 24:00</p>
+            <p>📍 {contacts.address}</p>
+            <p>📞 {contacts.phone}</p>
+            <p>🕒 {contacts.workHours}</p>
           </div>
           
           <button className={styles.getCardBtn}>
@@ -102,19 +102,19 @@ const Footer = () => {
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <p className={styles.contactLabel}>Адреса:</p>
-                <p className={styles.contactText}>вул. Кульпарківська 226А<br />м. Львів, Україна</p>
+                <p className={styles.contactText}>{contacts.address}</p>
               </div>
               
               <div className={styles.contactItem}>
                 <p className={styles.contactLabel}>Телефон:</p>
-                <a href="tel:+380987072572" className={styles.phoneLink}>
-                  +38 (098) 707-25-72
+                <a href={`tel:${contacts.phone}`} className={styles.phoneLink}>
+                  {contacts.phone}
                 </a>
               </div>
 
               <div className={styles.contactItem}>
                 <p className={styles.contactLabel}>Години роботи:</p>
-                <p className={styles.contactText}>Пн-Нд: 06:00 - 24:00</p>
+                <p className={styles.contactText}>{contacts.workHours}</p>
               </div>
 
               <button className={styles.feedbackBtn}>

@@ -14,7 +14,7 @@ function Login() {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            navigate("/gym-pool-website/admin/dashboard"); // редірект після входу
+            navigate("/gym-pool-website/admin"); // редірект після входу
         }
         catch (err){
             seterror("Невірний email або пароль");

@@ -24,6 +24,7 @@ function ProtectedRoute({ children }) {
     if (loading) return <p>Завантаження...</p>;
     if (!user) return <Navigate to={"/gym-pool-website/admin/login"} replace />;
     return children;
+
 }
 
 export default ProtectedRoute;

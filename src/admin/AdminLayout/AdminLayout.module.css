@@ -1,0 +1,11 @@
+.adminContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #f1f5f9;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}

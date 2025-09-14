@@ -18,8 +18,12 @@ import PrimeCafePage from "../pages/PrimeCafePage";
 
 
 // Адмінка
-import Login from "../pages/Login/Login";
-import Dashboard from "../pages/Dashboard/Dashboard";
+import Login from "../admin/Auth/Login";
+import AdminLayout  from "../admin/AdminLayout/AdminLayout";
+import Dashboard from "../admin/Modules/Dashboard/Dashboard";
+import Gallery from "../admin/Modules/Gallery/Gallery";
+import Settings from "../admin/Modules/Settings/Settings";
+import Contacts from "../admin/Modules/Contacts/Contacts";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 // Error
@@ -49,20 +53,25 @@ export const routes = createBrowserRouter([
   },
 
     // Адмінка
-
     {
-      path:"/gym-pool-website/admin/login",
-      element:<Login />,
+      path:"/gym-pool-website/admin/login", element:<Login />,
       errorElement: <ErrorPage />,
     },
     {
-      path:"/gym-pool-website/admin/dashboard",
+      path:"/gym-pool-website/admin",
       element: (
         <ProtectedRoute>
-          <Dashboard />
+          <AdminLayout />
         </ProtectedRoute>
       ),
       errorElement: <ErrorPage />,
+    
+      children:[
+        { index: true, element: <Dashboard /> },
+        { path: "gallery", element: <Gallery /> },
+        { path: "settings", element: <Settings /> },
+        { path: "contacts", element: <Contacts />}
+      ],
     },
 
 ]);
