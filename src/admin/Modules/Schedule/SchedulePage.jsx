@@ -274,6 +274,9 @@ const SchedulePage = () => {
           <button className={styles.activeView}>День</button>
           <button className={styles.activeView}>Тиждень</button>
           <button>Місяць</button>
+          <button onClick={() => fetchScheduleData()} className={styles.refreshBtn}>
+            🔄 Оновити
+          </button>
         </div>
       </div>
 
