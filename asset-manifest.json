@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gym-pool-website/static/css/main.7103e6fa.css",
-    "main.js": "/gym-pool-website/static/js/main.f8bb597a.js",
+    "main.css": "/gym-pool-website/static/css/main.69fc61b8.css",
+    "main.js": "/gym-pool-website/static/js/main.496ba38c.js",
     "static/media/finnish_sauna_3.jpg": "/gym-pool-website/static/media/finnish_sauna_3.9cd50c2e65fb23a8d19b.jpg",
     "static/media/LocationBakground.jpg.webp": "/gym-pool-website/static/media/LocationBakground.jpg.718ee212255165d9bf47.webp",
     "static/media/finnish_sauna_2.jpg": "/gym-pool-website/static/media/finnish_sauna_2.10b5a0f2652591930967.jpg",
@@ -78,11 +78,11 @@
     "static/media/logo.png": "/gym-pool-website/static/media/logo.ed64274d28c28ee4b724.png",
     "static/media/card_purchase.png": "/gym-pool-website/static/media/card_purchase.50ec2dcb4bd23bbcb0fa.png",
     "index.html": "/gym-pool-website/index.html",
-    "main.7103e6fa.css.map": "/gym-pool-website/static/css/main.7103e6fa.css.map",
-    "main.f8bb597a.js.map": "/gym-pool-website/static/js/main.f8bb597a.js.map"
+    "main.69fc61b8.css.map": "/gym-pool-website/static/css/main.69fc61b8.css.map",
+    "main.496ba38c.js.map": "/gym-pool-website/static/js/main.496ba38c.js.map"
   },
   "entrypoints": [
-    "static/css/main.7103e6fa.css",
-    "static/js/main.f8bb597a.js"
+    "static/css/main.69fc61b8.css",
+    "static/js/main.496ba38c.js"
   ]
 }
