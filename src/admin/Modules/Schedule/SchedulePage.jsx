@@ -13,11 +13,12 @@ import {
 import { db } from '../../../firebase';
 import styles from './SchedulePage.module.css';
 
+
 const SchedulePage = () => {
   const [scheduleData, setScheduleData] = useState({});
   const [loading, setLoading] = useState(true);
   const [selectedWeek, setSelectedWeek] = useState(getCurrentWeek());
-  const [selectedZone, setSelectedZone] = useState(0);
+  const [selectedZone, setSelectedZone] = useState(0); // Додана змінна для активної зони
   const [editingCell, setEditingCell] = useState(null);
   const [editValue, setEditValue] = useState('');
   const [error, setError] = useState('');
@@ -120,7 +121,7 @@ const SchedulePage = () => {
         });
       } else {
         // Створення нового запису
-        await addDoc(collection(db, 'gym-schedule'), {
+        const docRef = await addDoc(collection(db, 'gym-schedule'), {
           date,
           time,
           zone,
@@ -130,13 +131,27 @@ const SchedulePage = () => {
           createdAt: new Date(),
           updatedAt: new Date()
         });
+
+        // Оновлення локального стану з правильним ID
+        setScheduleData(prev => ({
+          ...prev,
+          [key]: {
+            id: docRef.id,
+            activity,
+            instructor,
+            capacity: parseInt(capacity) || 0
+          }
+        }));
+        
+        setError('');
+        return;
       }
 
-      // Оновлення локального стану
+      // Оновлення локального стану для існуючого запису
       setScheduleData(prev => ({
         ...prev,
         [key]: {
-          id: existingItem?.id || 'temp',
+          id: existingItem.id,
           activity,
           instructor,
           capacity: parseInt(capacity) || 0
@@ -210,13 +225,31 @@ const SchedulePage = () => {
     setSelectedWeek(newWeek);
   };
 
+  // Зміна активної зони
+  const handleZoneChange = (zoneIndex) => {
+    setSelectedZone(zoneIndex);
+    setEditingCell(null); // Скасувати редагування при зміні зони
+    setEditValue('');
+  };
+
   // Отримання значення комірки
   const getCellValue = (date, time, zone) => {
     const key = `${date}-${time}-${zone}`;
     return scheduleData[key]?.activity || '';
   };
 
-  // Завантаження даних при зміні тижня
+  // Швидке додавання тренування
+  const handleQuickAdd = async (trainingName) => {
+    if (editingCell) {
+      // Якщо редагуємо комірку, просто встановлюємо значення
+      setEditValue(trainingName);
+    } else {
+      // Якщо не редагуємо, можна показати повідомлення
+      alert('Спочатку клікніть на комірку, яку хочете редагувати');
+    }
+  };
+
+  // Завантаження даних при зміні тижня або зони
   useEffect(() => {
     fetchScheduleData();
   }, [selectedWeek]);
@@ -256,7 +289,7 @@ const SchedulePage = () => {
           <button
             key={zone}
             className={`${styles.zoneBtn} ${index === selectedZone ? styles.activeZone : ''}`}
-            onClick={() => setSelectedZone(index)}
+            onClick={() => handleZoneChange(index)}
           >
             {zone}
           </button>
@@ -283,7 +316,7 @@ const SchedulePage = () => {
                 <td className={styles.timeSlot}>{time}</td>
                 {weekDays.map((day) => (
                   <td key={`${day.fullDate}-${time}`} className={styles.scheduleCell}>
-                    {editingCell === `${day.fullDate}-${time}-${zones[0]}` ? (
+                    {editingCell === `${day.fullDate}-${time}-${zones[selectedZone]}` ? (
                       <div className={styles.editCell}>
                         <input
                           type="text"
@@ -304,9 +337,9 @@ const SchedulePage = () => {
                     ) : (
                       <div
                         className={styles.cellContent}
-                        onClick={() => handleCellEdit(day.fullDate, time, zones[0])}
+                        onClick={() => handleCellEdit(day.fullDate, time, zones[selectedZone])}
                       >
-                        {getCellValue(day.fullDate, time, zones[0]) || 'Клікніть для редагування'}
+                        {getCellValue(day.fullDate, time, zones[selectedZone]) || 'Клікніть для редагування'}
                       </div>
                     )}
                   </td>
@@ -319,32 +352,17 @@ const SchedulePage = () => {
 
       {/* Швидке додавання популярних тренувань */}
       <div className={styles.quickAdd}>
-        <h3>Швидке додавання тренувань:</h3>
+        <h3>Швидке додавання тренувань для зони: {zones[selectedZone]}</h3>
         <div className={styles.quickButtons}>
-          <button onClick={() => setEditValue('Ранкове тренування')} className={styles.quickBtn}>
-            Ранкове тренування
-          </button>
-          <button onClick={() => setEditValue('Персональні тренування')} className={styles.quickBtn}>
-            Персональні тренування
-          </button>
-          <button onClick={() => setEditValue('Обідня перерва')} className={styles.quickBtn}>
-            Обідня перерва
-          </button>
-          <button onClick={() => setEditValue('Денні тренування')} className={styles.quickBtn}>
-            Денні тренування
-          </button>
-          <button onClick={() => setEditValue('Вечірні тренування')} className={styles.quickBtn}>
-            Вечірні тренування
-          </button>
-          <button onClick={() => setEditValue('Силові тренування')} className={styles.quickBtn}>
-            Силові тренування
-          </button>
-          <button onClick={() => setEditValue('Відкриття залу')} className={styles.quickBtn}>
-            Відкриття залу
-          </button>
-          <button onClick={() => setEditValue('Закриття залу')} className={styles.quickBtn}>
-            Закриття залу
-          </button>
+          {getQuickButtonsForZone(selectedZone).map((training, index) => (
+            <button 
+              key={index}
+              onClick={() => handleQuickAdd(training)} 
+              className={styles.quickBtn}
+            >
+              {training}
+            </button>
+          ))}
         </div>
       </div>
     </div>
