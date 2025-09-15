@@ -31,26 +31,30 @@ function AddNews() {
   };
 
   const handleSave = async () => {
-    if (!file) return alert("Оберіть фото!");
+  let imageUrl = null;
 
+  if (file) {
     const storageRef = ref(storage, `newsImages/${Date.now()}_${file.name}`);
     await uploadBytes(storageRef, file);
-    const imageUrl = await getDownloadURL(storageRef);
+    imageUrl = await getDownloadURL(storageRef);
+  }
 
-    const docRef = await addDoc(collection(db, "news"), {
-      title,
-      content,
-      imageUrl,
-      timestamp: serverTimestamp(),
-    });
+  const docRef = await addDoc(collection(db, "news"), {
+    title,
+    content,
+    imageUrl, // буде null якщо фото не додано
+    timestamp: serverTimestamp(),
+  });
 
-    setNewsList(prev => [...prev, { id: docRef.id, title, content, imageUrl }]);
-    alert("Новина додана!");
-    setTitle("");
-    setContent("");
-    setFile(null);
-    setPreview(null);
-  };
+  setNewsList(prev => [...prev, { id: docRef.id, title, content, imageUrl }]);
+  alert("Новина додана!");
+
+  setTitle("");
+  setContent("");
+  setFile(null);
+  setPreview(null);
+};
+
 
   const handleDelete = async (id) => {
     await deleteDoc(doc(db, "news", id));
