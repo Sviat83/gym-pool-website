@@ -23,6 +23,7 @@ import AdminLayout  from "../admin/AdminLayout/AdminLayout";
 import Dashboard from "../admin/Modules/Dashboard/Dashboard";
 import Gallery from "../admin/Modules/Gallery/Gallery";
 import Settings from "../admin/Modules/Settings/Settings";
+import News from "../admin/Modules/News/News";
 import Contacts from "../admin/Modules/Contacts/Contacts";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import AgeGroupAdmin from "../admin/Modules/AgeGroupAdmin/AgeGroupAdmin";
@@ -78,6 +79,7 @@ export const routes = createBrowserRouter([
         { path: "settings", element: <Settings /> },
         { path: "contacts", element: <Contacts />},
         { path: "ageGroup" , element: <AgeGroupAdmin/>},
+        { path: "news", element: <News />},
         { path: "contacts", element: <Contacts /> },
         { path: "schedule", element: <Schedule /> }
 
