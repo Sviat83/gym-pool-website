@@ -12,7 +12,7 @@ import styles from './arrow-slider.module.css'
 
 
 
-const ArrowSlider = ({items}) => {
+const ArrowSlider = ({ items }) => {
     return (
         <div className={styles.slider}>
             <Swiper
