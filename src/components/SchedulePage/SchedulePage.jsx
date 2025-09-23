@@ -56,17 +56,17 @@ const SchedulePage = () => {
 
 
   const navigateDate = (direction) => {
-    const newDate = new Date(currentDate);
+    const date = new Date(currentDate);
     
     if (viewMode === 'day') {
-      newDate.setDate(currentDate.getDate() + direction);
+      date.setDate(date.getDate() + direction);
     } else if (viewMode === 'week') {
-      newDate.setDate(currentDate.getDate() + (direction * 7));
+      date.setDate(date.getDate() + (direction * 7));
     } else if (viewMode === 'month') {
-      newDate.setMonth(currentDate.getMonth() + direction);
+      date.setMonth(date.getMonth() + direction);
     }
     
-    dispatch(setCurrentDate(newDate.toISOString()));
+    dispatch(setCurrentDate(date.toISOString()));
   };
 
   // getCurrentSchedule більше не потрібен, оскільки ми використовуємо селектор currentSchedule
@@ -83,8 +83,8 @@ const SchedulePage = () => {
       case 'month':
         return (
           <MonthView 
-            days={getMonthDays(currentDate)} 
-            currentMonth={currentDate.getMonth()} 
+            days={getMonthDays(new Date(currentDate))} 
+            currentMonth={new Date(currentDate).getMonth()} 
             schedule={schedule} 
           />
         );
@@ -95,13 +95,17 @@ const SchedulePage = () => {
 
   const getDateString = () => {
     if (viewMode === 'week') {
-      const startWeek = getWeekDays(currentDate)[0];
-      const endWeek = getWeekDays(currentDate)[6];
-      return `Тиждень ${startWeek.getDate()} ${startWeek.toLocaleDateString('uk-UA', { month: 'long' })} - ${endWeek.getDate()} ${endWeek.toLocaleDateString('uk-UA', { month: 'long' })} ${currentDate.getFullYear()} р.`;
+      const date = new Date(currentDate);
+      const startWeek = getWeekDays(date)[0];
+      const endWeek = getWeekDays(date)[6];
+      return `Тиждень ${startWeek.getDate()} ${startWeek.toLocaleDateString('uk-UA', 
+        { month: 'long' })} - ${endWeek.getDate()} ${endWeek.toLocaleDateString('uk-UA', 
+          { month: 'long' })} ${date.getFullYear()} р.`;
+
     } else if (viewMode === 'month') {
-      return currentDate.toLocaleDateString('uk-UA', { month: 'long', year: 'numeric' });
+      return new Date(currentDate).toLocaleDateString('uk-UA', { month: 'long', year: 'numeric' });
     } else {
-      return formatDate(currentDate);
+      return formatDate(new Date(currentDate));
     }
   };
 

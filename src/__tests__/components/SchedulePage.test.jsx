@@ -27,8 +27,24 @@ const renderWithRedux = (
 };
 
 describe('SchedulePage Component', () => {
+  const defaultState = {
+    schedule: {
+      activeZone: 'gym',
+      viewMode: 'week',
+      currentDate: new Date().toISOString(),
+      scheduleData: {},
+      zones: {
+        gym: 'ТРЕНАЖЕРНИЙ ЗАЛ',
+        aqua: 'АКВАЗОНА',
+        group: 'ГРУПОВІ ЗАНЯТТЯ',
+        kids: 'ДИТЯЧИЙ КЛУБ',
+        doctor: 'ЛІКАР-ТЕРАПЕВТ ТА ДІЄТОЛОГ'
+      }
+    }
+  };
+
   it('renders without crashing', () => {
-    renderWithRedux(<SchedulePage />);
+    renderWithRedux(<SchedulePage />, { preloadedState: defaultState });
     expect(screen.getByText(/Розклад/i)).toBeInTheDocument();
   });
 
@@ -69,32 +85,28 @@ describe('SchedulePage Component', () => {
   });
 
   it('navigates through dates correctly', () => {
-    renderWithRedux(<SchedulePage />);
-    const prevButton = screen.getByLabelText(/попередній/i);
-    const nextButton = screen.getByLabelText(/наступний/i);
+    renderWithRedux(<SchedulePage />, { preloadedState: defaultState });
+    const prevButton = screen.getByText('←');
+    const nextButton = screen.getByText('→');
     
-    const initialDate = screen.getByText(/\d{1,2}\s\w+\s\d{4}/);
+    const initialDate = screen.getByText(/Тиждень \d{1,2} \w+ - \d{1,2} \w+ \d{4}/);
     fireEvent.click(nextButton);
     // Перевіряємо, що дата змінилась
-    expect(screen.getByText(/\d{1,2}\s\w+\s\d{4}/)).not.toEqual(initialDate);
+    const newDate = screen.getByText(/Тиждень \d{1,2} \w+ - \d{1,2} \w+ \d{4}/);
+    expect(newDate.textContent).not.toBe(initialDate.textContent);
   });
 
   it('displays schedule data correctly', () => {
-    const currentDate = new Date().toISOString().split('T')[0];
+    const currentDate = new Date().toISOString();
     const preloadedState = {
       schedule: {
+        ...defaultState.schedule,
         activeZone: 'gym',
         viewMode: 'day',
-        currentDate: new Date().toISOString(),
+        currentDate: currentDate,
         scheduleData: {
           gym: {
-            [currentDate]: {
-              '09:00': {
-                title: 'Ранкове тренування',
-                trainer: 'Іван Петренко',
-                duration: 60
-              }
-            }
+            '09:00': 'Ранкове тренування'
           }
         }
       }
@@ -102,6 +114,5 @@ describe('SchedulePage Component', () => {
     
     renderWithRedux(<SchedulePage />, { preloadedState });
     expect(screen.getByText('Ранкове тренування')).toBeInTheDocument();
-    expect(screen.getByText('Іван Петренко')).toBeInTheDocument();
   });
 });

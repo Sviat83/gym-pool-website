@@ -40,10 +40,12 @@ export const {
 // Selectors
 export const selectActiveZone = (state) => state.schedule.activeZone;
 export const selectViewMode = (state) => state.schedule.viewMode;
-export const selectCurrentDate = (state) => new Date(state.schedule.currentDate);
+export const selectCurrentDate = (state) => state.schedule.currentDate;
 export const selectScheduleData = (state) => state.schedule.scheduleData;
 export const selectZones = (state) => state.schedule.zones;
-export const selectCurrentZoneSchedule = (state) => 
-  state.schedule.scheduleData[state.schedule.activeZone] || {};
+export const selectCurrentZoneSchedule = (state) => {
+  const { scheduleData, activeZone } = state.schedule;
+  return scheduleData && scheduleData[activeZone] ? scheduleData[activeZone] : {};
+};
 
 export default scheduleSlice.reducer;
