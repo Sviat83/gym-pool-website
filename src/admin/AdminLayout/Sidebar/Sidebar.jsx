@@ -64,6 +64,25 @@ function Sidebar() {
                         Контакти
                     </NavLink>
                 </li>
+                {/* <li>
+                  <NavLink
+                 to="/gym-pool-website/admin/clubcards"
+                 className={({ isActive }) => (isActive ? styles.isActive : "")}
+                 >
+                 Клубні картки
+                 </NavLink>
+                </li> */}
+                <NavLink
+  to="/gym-pool-website/admin/price"
+  className={({ isActive }) => isActive ? styles.isActive : ""}>
+  Ціни на абонементи
+</NavLink>
+
+<NavLink
+  to="/gym-pool-website/admin/ageGroup"  // ⬅️ нижній регістр
+  className={({ isActive }) => isActive ? styles.isActive : ""}>
+  Дитячі тренування
+</NavLink>
                 <li>
                     <NavLink
                         to="/gym-pool-website/admin/settings"

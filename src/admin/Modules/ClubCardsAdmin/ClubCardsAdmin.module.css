@@ -1,0 +1,130 @@
+.wrap {
+  padding: 24px;
+}
+
+.filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.filter button {
+  padding: 6px 10px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.filter .active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.grow {
+  display: grid;
+  gap: 6px;
+}
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+input, select, textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #fff;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+}
+button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #111827;
+  background: #111827;
+  color: #fff;
+  cursor: pointer;
+}
+.secondary {
+  background: #fff;
+  color: #111827;
+}
+.danger {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+.list {
+  display: grid;
+  gap: 14px;
+}
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  background: #fff;
+}
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.badge {
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.price {
+  font-weight: 700;
+}
+.duration {
+  color: #6b7280;
+}
+.cardActions {
+  display: flex;
+  gap: 8px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+.thumb {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+.perks {
+  margin: 0;
+  padding-left: 18px;
+}
