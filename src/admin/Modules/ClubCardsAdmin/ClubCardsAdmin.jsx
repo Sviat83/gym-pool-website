@@ -10,7 +10,7 @@ import {
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore";
-import { db } from "../../../firebase"; // шлях від вашого адмін-модуля до firebase.js
+import { db } from "../../../firebase"; 
 import styles from "./ClubCardsAdmin.module.css";
 
 const TYPES = [
@@ -24,7 +24,7 @@ const emptyForm = {
   price: "",
   duration: "",
   image: "",
-  perksText: "", // комою розділений список, у БД збережемо масивом
+  perksText: "", 
 };
 
 export default function ClubCardsAdmin() {
