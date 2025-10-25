@@ -604,7 +604,7 @@ export default function ClubCardsSection() {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // 🔹 Отримати всі картки з бекенду
+  //  Отримати всі картки з бекенду
   useEffect(() => {
     const fetchCards = async () => {
       try {
@@ -620,7 +620,7 @@ export default function ClubCardsSection() {
     fetchCards();
   }, []);
 
-  // 🔹 Розділяємо за типом
+  //  Розділяємо за типом
   const plans = useMemo(() => {
     if (tab === "adult") return cards.filter((c) => c.type === "Adult");
     return cards.filter((c) => c.type === "Kids");
