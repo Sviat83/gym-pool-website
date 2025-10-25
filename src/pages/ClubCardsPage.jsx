@@ -64,10 +64,10 @@ const ClubCardsPage = () => {
     >
       <ArrowSlider items={items} />
 
-      {/* 🔹 Передаємо callback handleBuy у ClubCardsSection */}
+      {/*  Передаємо callback handleBuy у ClubCardsSection */}
       <ClubCardsSection onBuy={handleBuy} />
 
-      {/* 🔹 Модалка покупки */}
+      {/*  Модалка покупки */}
       {selectedCard && (
         <PurchaseModal open={true} onClose={closeModal} plan={selectedCard} />
       )}
