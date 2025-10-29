@@ -1,104 +1,72 @@
+
 import React, { useEffect, useMemo, useState } from "react";
-import {
-  addDoc,
-  collection,
-  deleteDoc,
-  doc,
-  getDocs,
-  orderBy,
-  query,
-  serverTimestamp,
-  updateDoc,
-} from "firebase/firestore";
-import { db } from "../../../firebase"; 
 import styles from "./ClubCardsAdmin.module.css";
 
+
 const TYPES = [
-  { id: "adult", label: "Дорослі" },
-  { id: "kids", label: "Дитячі" },
+  { id: "Adult", label: "Дорослі" },
+  { id: "Kids", label: "Дитячі" },
 ];
 
 const emptyForm = {
   title: "",
-  type: "adult",
+  type: "Adult",
   price: "",
-  duration: "",
-  image: "",
-  perksText: "", 
+  perksText: "", // це піде в benefits
 };
 
 export default function ClubCardsAdmin() {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState("all"); // all | adult | kids
-  const [form, setForm] = useState(emptyForm);
+  const API_URL = "http://localhost:3001/api";
+
+  const [items, setItems] = useState([]);          // всі картки з бекенду
+  const [loading, setLoading] = useState(true);    // лоадер
+  const [filter, setFilter] = useState("all");     // all | Adult | Kids
+  const [form, setForm] = useState(emptyForm);     // форма створення/редагування
   const [saving, setSaving] = useState(false);
-  const [editingId, setEditingId] = useState(null);
+  const [editingId, setEditingId] = useState(null); 
 
-  const colRef = useMemo(() => collection(db, "clubCards"), []);
-
-  const load = async () => {
-    setLoading(true);
-    const q = query(colRef, orderBy("createdAt", "desc"));
-    const snap = await getDocs(q);
-    const list = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
-    setItems(list);
-    setLoading(false);
+  // ЗАВАНТАЖЕННЯ ДАНИХ З БЕКЕНДУ
+  const loadCards = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch(`${API_URL}/cards`);
+      const data = await res.json();
+      setItems(data);
+    } catch (err) {
+      console.error("Помилка завантаження карток:", err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
-    load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    loadCards();
+    
   }, []);
 
+  // ФІЛЬТР ЗА ТИПОМ 
   const filtered = useMemo(() => {
     if (filter === "all") return items;
     return items.filter((i) => i.type === filter);
   }, [items, filter]);
 
+  // ОНОВЛЕННЯ ФОРМИ 
   const onChange = (e) => {
     const { name, value } = e.target;
     setForm((s) => ({ ...s, [name]: value }));
   };
 
-  const parsePerks = (text) =>
-    text
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean);
-
-  const handleAdd = async (e) => {
-    e.preventDefault();
-    setSaving(true);
-    try {
-      const payload = {
-        title: form.title.trim(),
-        type: form.type,
-        price: Number(form.price) || 0,
-        duration: form.duration.trim(),
-        image: form.image.trim(),
-        perks: parsePerks(form.perksText),
-        createdAt: serverTimestamp(),
-        updatedAt: serverTimestamp(),
-      };
-      await addDoc(colRef, payload);
-      setForm(emptyForm);
-      await load();
-    } finally {
-      setSaving(false);
-    }
-  };
-
+  //ПОЧАТИ РЕДАГУВАННЯ
   const startEdit = (it) => {
     setEditingId(it.id);
     setForm({
       title: it.title || "",
-      type: it.type || "adult",
+      type: it.type || "Adult",
       price: it.price ?? "",
-      duration: it.duration || "",
-      image: it.image || "",
-      perksText: (it.perks || []).join(", "),
+      perksText: it.benefits || "", // benefits з бази -> у textarea
     });
+
+    // щоб адмін зверху бачив форму
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -107,35 +75,90 @@ export default function ClubCardsAdmin() {
     setForm(emptyForm);
   };
 
-  const handleUpdate = async (e) => {
+  // СТВОРЕННЯ КАРТКИ (POST /api/cards)
+  const handleAdd = async (e) => {
     e.preventDefault();
-    if (!editingId) return;
     setSaving(true);
     try {
-      const ref = doc(db, "clubCards", editingId);
       const payload = {
         title: form.title.trim(),
         type: form.type,
-        price: Number(form.price) || 0,
-        duration: form.duration.trim(),
-        image: form.image.trim(),
-        perks: parsePerks(form.perksText),
-        updatedAt: serverTimestamp(),
+        price: parseFloat(form.price) || 0,
+        benefits: form.perksText.trim(),
       };
-      await updateDoc(ref, payload);
-      cancelEdit();
-      await load();
+
+      const res = await fetch(`${API_URL}/cards`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        alert(" Помилка при додаванні картки");
+      } else {
+        cancelEdit();
+        await loadCards();
+      }
+    } catch (err) {
+      console.error("Помилка створення:", err);
     } finally {
       setSaving(false);
     }
   };
 
-  const handleDelete = async (id) => {
-    if (!window.confirm("Видалити цю картку?")) return;
-    await deleteDoc(doc(db, "clubCards", id));
-    setItems((s) => s.filter((x) => x.id !== id));
+  // ОНОВЛЕННЯ КАРТКИ (PUT /api/cards/:id) 
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    if (!editingId) return;
+    setSaving(true);
+
+    try {
+      const payload = {
+        title: form.title.trim(),
+        type: form.type,
+        price: parseFloat(form.price) || 0,
+        benefits: form.perksText.trim(),
+      };
+
+      const res = await fetch(`${API_URL}/cards/${editingId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        alert(" Помилка при оновленні картки");
+      } else {
+        cancelEdit();
+        await loadCards();
+      }
+    } catch (err) {
+      console.error("Помилка оновлення:", err);
+    } finally {
+      setSaving(false);
+    }
   };
 
+  // ВИДАЛЕННЯ КАРТКИ (DELETE /api/cards/:id)
+  const handleDelete = async (id) => {
+    if (!window.confirm("Видалити цю картку?")) return;
+
+    try {
+      const res = await fetch(`${API_URL}/cards/${id}`, {
+        method: "DELETE",
+      });
+      if (!res.ok) {
+        alert(" Помилка при видаленні");
+      } else {
+        // оптимістичне оновлення
+        setItems((s) => s.filter((x) => x.id !== id));
+      }
+    } catch (err) {
+      console.error("Помилка видалення:", err);
+    }
+  };
+
+  // РЕНДЕР 
   return (
     <div className={styles.wrap}>
       <h1>Клубні картки (адмін)</h1>
@@ -148,6 +171,7 @@ export default function ClubCardsAdmin() {
         >
           Усі
         </button>
+
         {TYPES.map((t) => (
           <button
             key={t.id}
@@ -159,7 +183,7 @@ export default function ClubCardsAdmin() {
         ))}
       </div>
 
-      {/* Форма додавання / редагування */}
+      {/* Форма створення / редагування */}
       <form
         onSubmit={editingId ? handleUpdate : handleAdd}
         className={styles.form}
@@ -171,7 +195,7 @@ export default function ClubCardsAdmin() {
               name="title"
               value={form.title}
               onChange={onChange}
-              placeholder="Adult Premium"
+              placeholder="12 МІСЯЦІВ / Premium / etc"
               required
             />
           </label>
@@ -200,38 +224,15 @@ export default function ClubCardsAdmin() {
               required
             />
           </label>
-
-          <label>
-            Тривалість
-            <input
-              name="duration"
-              value={form.duration}
-              onChange={onChange}
-              placeholder="1 місяць"
-              required
-            />
-          </label>
-        </div>
-
-        <div className={styles.row}>
-          <label className={styles.grow}>
-            Фото (URL)
-            <input
-              name="image"
-              value={form.image}
-              onChange={onChange}
-              placeholder="https://..."
-            />
-          </label>
         </div>
 
         <label className={styles.grow}>
-          Переваги (через кому)
+          Переваги (benefits, через кому або як текстовий опис)
           <textarea
             name="perksText"
             value={form.perksText}
             onChange={onChange}
-            placeholder="Сауна, Групові тренування, Тренажерний зал"
+            placeholder="Сауна, Групові тренування, Тренажерний зал..."
             rows={3}
           />
         </label>
@@ -272,12 +273,12 @@ export default function ClubCardsAdmin() {
                   <h3 className={styles.title}>{it.title}</h3>
                   <div className={styles.meta}>
                     <span className={styles.badge}>
-                      {it.type === "adult" ? "Дорослі" : "Дитячі"}
+                      {it.type === "Adult" ? "Дорослі" : "Дитячі"}
                     </span>
                     <span className={styles.price}>{it.price} ₴</span>
-                    <span className={styles.duration}>{it.duration}</span>
                   </div>
                 </div>
+
                 <div className={styles.cardActions}>
                   <button onClick={() => startEdit(it)}>Редагувати</button>
                   <button
@@ -290,19 +291,11 @@ export default function ClubCardsAdmin() {
               </div>
 
               <div className={styles.body}>
-                {it.image && (
-                  <img
-                    className={styles.thumb}
-                    src={it.image}
-                    alt={it.title}
-                    loading="lazy"
-                  />
-                )}
-                {Array.isArray(it.perks) && it.perks.length > 0 && (
+                {it.benefits && (
                   <ul className={styles.perks}>
-                    {it.perks.map((p, i) => (
-                      <li key={i}>{p}</li>
-                    ))}
+                    {it.benefits
+                      .split(",")
+                      .map((p, i) => <li key={i}>{p.trim()}</li>)}
                   </ul>
                 )}
               </div>

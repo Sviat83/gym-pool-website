@@ -35,7 +35,7 @@ describe("TrainersPage Component", () => {
     const detailButton = screen.getAllByText(/ДЕТАЛЬНІШЕ/i)[0];
     fireEvent.click(detailButton);
 
-    // знайдемо кнопку за aria-label, бо це accessibility name
+    
     const closeButton = screen.getByRole("button", { name: /Закрити/i });
     fireEvent.click(closeButton);
 

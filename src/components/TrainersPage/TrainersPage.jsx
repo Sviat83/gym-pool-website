@@ -17,8 +17,7 @@ const TABS = [
   { id: "med", label: "ЛІКАР–ТЕРАПЕВТ ТА ДІЄТОЛОГ" },
 ];
 
-/* Дані тренерів з детальною інформацією у форматі:
-   { id, name, role, photo, about: { qualification, experience, skills: [] } }  */
+/* Дані тренерів з детальною інформацією у форматі:  */
 const DATA = {
   gym: [
     {
@@ -392,7 +391,7 @@ function TrainerCard({ data, onMore }) {
   );
 }
 
-/* ---------- Модальне вікно "Детальніше" ---------- */
+/*  Модальне вікно "Детальніше" */
 function TrainerModal({ open, onClose, trainer }) {
   // закриття по Esc
   useEffect(() => {

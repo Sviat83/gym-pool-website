@@ -29,6 +29,8 @@ import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import AgeGroupAdmin from "../admin/Modules/AgeGroupAdmin/AgeGroupAdmin";
 import AdminSchedule from "../admin/Modules/Schedule/SchedulePage"; // уникаємо конфлікту з публічною сторінкою
 import ClubCardsAdmin from "../admin/Modules/ClubCardsAdmin/ClubCardsAdmin"; 
+import PurchasesAdmin from "../admin/Modules/PurchasesAdmin/PurchasesAdmin";
+
 
 // Error
 import ErrorPage from "../pages/ErrorPage";
@@ -76,7 +78,8 @@ export const routes = createBrowserRouter([
       { path: "ageGroup" , element: <AgeGroupAdmin/> },  
       { path: "news", element: <News /> },
       { path: "schedule", element: <AdminSchedule /> },
-      { path: "price", element: <ClubCardsAdmin /> },     
+      { path: "price", element: <ClubCardsAdmin /> },   
+      { path: "purchases", element: <PurchasesAdmin /> },  
     ],
   },
 ]);

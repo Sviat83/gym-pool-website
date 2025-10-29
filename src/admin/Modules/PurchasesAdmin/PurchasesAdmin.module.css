@@ -1,0 +1,104 @@
+.wrap {
+  padding: 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.card:hover {
+  border-color: #111827;
+}
+.active {
+  border-color: #111827;
+  box-shadow: 0 0 0 1px #111827;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.badge {
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.price {
+  font-weight: 700;
+}
+.phone {
+  font-size: 13px;
+  color: #555;
+}
+.gift {
+  font-size: 13px;
+  color: #666;
+}
+.actions {
+  display: flex;
+  align-items: start;
+}
+.deleteBtn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  background: #dc2626;
+}
+
+.details {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+  min-height: 200px;
+}
+
+.perks {
+  margin: 4px 0 0 16px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.placeholder {
+  color: #6b7280;
+  font-style: italic;
+}

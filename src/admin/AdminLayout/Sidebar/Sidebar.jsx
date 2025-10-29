@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import styles from "./Sidebar.module.css";
 
 function Sidebar() {
@@ -50,7 +49,7 @@ function Sidebar() {
                 </li>
                 <li>
                     <NavLink
-                        to="/gym-pool-website/admin/AgeGroup"
+                        to="/gym-pool-website/admin/ageGroup"
                         className={({ isActive }) => isActive ? styles.isActive : ""}
                     >
                         Дитячі тренування
@@ -64,25 +63,22 @@ function Sidebar() {
                         Контакти
                     </NavLink>
                 </li>
-                {/* <li>
-                  <NavLink
-                 to="/gym-pool-website/admin/clubcards"
-                 className={({ isActive }) => (isActive ? styles.isActive : "")}
-                 >
-                 Клубні картки
-                 </NavLink>
-                </li> */}
-                <NavLink
-  to="/gym-pool-website/admin/price"
-  className={({ isActive }) => isActive ? styles.isActive : ""}>
-  Ціни на абонементи
-</NavLink>
-
-<NavLink
-  to="/gym-pool-website/admin/ageGroup"  // ⬅️ нижній регістр
-  className={({ isActive }) => isActive ? styles.isActive : ""}>
-  Дитячі тренування
-</NavLink>
+                <li>
+                    <NavLink
+                        to="/gym-pool-website/admin/price"
+                        className={({ isActive }) => isActive ? styles.isActive : ""}
+                    >
+                        Ціни на абонементи
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to="/gym-pool-website/admin/purchases"
+                        className={({ isActive }) => isActive ? styles.isActive : ""}
+                    >
+                        Покупки
+                    </NavLink>
+                </li>
                 <li>
                     <NavLink
                         to="/gym-pool-website/admin/settings"
@@ -93,6 +89,7 @@ function Sidebar() {
                 </li>
             </ul>
         </aside>
-    )
+    );
 }
+
 export default Sidebar;
